@@ -1,0 +1,18 @@
+body {
+    background: url(bg.webp) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+.container{
+    margin-top: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.img{
+    width: 100px;
+    height: 100px;
+    visibility: hidden;
+}
