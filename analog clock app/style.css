@@ -137,16 +137,6 @@ span {
     left: 198px;
 }
 
-.minute-hand .arrow {
-    font-size: 30px;
-    font-weight: bold;
-    color: #000000;
-    transform: rotate(180deg);
-    position: absolute;
-    left: 190px;
-    top: -7px;
-}
-
 .hour-hand-wrapper {
     width: 300px;
     height: 300px;
@@ -166,16 +156,6 @@ span {
     background-color: #000000;
     position: absolute;
     left: 148px;
-}
-
-.hour-hand .arrow {
-    font-size: 30px;
-    font-weight: bold;
-    color: #000000;
-    transform: rotate(180deg);
-    position: absolute;
-    left: 140px;
-    top: -7px;
 }
 
 .second-hand-wrapper {
