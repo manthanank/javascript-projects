@@ -21,13 +21,8 @@ h1{
     padding: 10px;
     text-align: center;
 }
-a:link {
-    color: rgb(0, 0, 0);
-    background-color: transparent;
-    text-decoration: none;
-}
-a:hover {
-    color: rgb(0, 0, 0);
-    background-color: transparent;
-    text-decoration: underline;
+a{
+    font-family: cursive;
+    font-weight: bolder;
+    font-size: larger;
 }
