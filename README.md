@@ -2,3 +2,4 @@
 
 - Weather App
 - Digital Clock App
+- Music Player
