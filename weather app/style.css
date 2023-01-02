@@ -207,7 +207,7 @@ label {
 }
 
 /* Desktop layout */
-@media (min-width: 1200px) {
+/* @media (min-width: 1200px) {
   main {
     width: 80%;
   }
@@ -243,4 +243,4 @@ label {
   #location, #temperature, #wind, #weather-main, #weather-description {
     font-size: 1.5em;
   }
-}
+} */
