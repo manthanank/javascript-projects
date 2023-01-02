@@ -1,29 +1,246 @@
-body {
-    background: url(/bg.webp) no-repeat center center fixed; 
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-  }
-  main{
-    margin-top: 20px;
-  }
-.container{
-    margin-top: 80px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+main {
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
 }
-.img{
-    width: 100px;
-    height: 100px;
-    visibility: hidden;
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px 0;
 }
+
 h1{
-    text-align: center;
-    font-family: cursive;
-    margin-top: 20px;
+  font-size: 3rem;
+  font-weight: bold;
+  margin: 0;
+  font-family: cursive;
 }
-form{
-    font-family: cursive;
+
+form {
+  width: 60%;
+}
+
+.form-control {
+  /* width: 100%; */
+  height: 50px;
+  font-size: 1.2em;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  padding: 0 20px;
+}
+
+button {
+  width: 20%;
+  height: 50px;
+  font-size: 1.2em;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  background-color: white;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+  margin-top: 10px;
+}
+
+button:hover {
+  background-color: #ccc;
+}
+
+#weather-icon {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+  border-radius: 5px;
+  visibility: hidden;
+}
+
+.icon {
+  width: 200px;
+  height: 200px;
+  border-radius: 5px;
+  object-fit: cover;
+}
+
+
+label {
+  font-size: 1.2em;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+#location {
+  color: blue;
+}
+
+#temperature {
+  color: red;
+}
+
+#wind {
+  color: green;
+}
+
+#weather-main {
+  text-transform: uppercase;
+}
+
+#weather-description {
+  font-style: italic;
+}
+
+/* Mobile layout (portrait and landscape) */
+@media (max-width: 767px) {
+  main {
+    width: 90%;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  form {
+    width: 90%;
+  }
+
+  .form-control {
+    height: 40px;
+    font-size: 1em;
+  }
+
+  button {
+    width: 30%;
+    height: 40px;
+    font-size: 1em;
+  }
+
+  .icon {
+    width: 150px;
+    height: 150px;
+  }
+
+  label {
+    font-size: 1em;
+  }
+
+  #location, #temperature, #wind, #weather-main, #weather-description {
+    font-size: 1.2em;
+  }
+}
+
+/* Tablet layout (portrait) */
+@media (min-width: 768px) and (max-width: 991px) {
+  main {
+    width: 70%;
+  }
+
+  h1 {
+    font-size: 3rem;
+  }
+
+  form {
+    width: 70%;
+  }
+
+  .form-control {
+    height: 40px;
+    font-size: 1em;
+  }
+
+  button {
+    width: 30%;
+    height: 40px;
+    font-size: 1em;
+  }
+
+  .icon {
+    width: 150px;
+    height: 150px;
+  }
+
+  label {
+    font-size: 1em;
+  }
+
+  #location, #temperature, #wind, #weather-main, #weather-description {
+    font-size: 1.2em;
+  }
+}
+
+/* Tablet layout (landscape) */
+@media (min-width: 992px) and (max-width: 1199px) {
+  main {
+    width: 70%;
+  }
+
+  h1 {
+    font-size: 3rem;
+  }
+
+  form {
+    width: 70%;
+  }
+
+  .form-control {
+    height: 40px;
+    font-size: 1em;
+  }
+
+  button {
+    width: 30%;
+    height: 40px;
+    font-size: 1em;
+  }
+
+  .icon {
+    width: 200px;
+    height: 200px;
+  }
+
+  label {
+    font-size: 1em;
+  }
+
+  #location, #temperature, #wind, #weather-main, #weather-description {
+    font-size: 1.2em;
+  }
+}
+
+/* Desktop layout */
+@media (min-width: 1200px) {
+  main {
+    width: 80%;
+  }
+
+  h1 {
+    font-size: 3rem;
+  }
+
+  form {
+    width: 60%;
+  }
+
+  .form-control {
+    height: 50px;
+    font-size: 1.2em;
+  }
+
+  button {
+    width: 20%;
+    height: 50px;
+    font-size: 1.2em;
+  }
+  
+  .icon {
+    width: 200px;
+    height: 200px;
+  }
+  
+  label {
+    font-size: 1.2em;
+  }
+  
+  #location, #temperature, #wind, #weather-main, #weather-description {
+    font-size: 1.5em;
+  }
 }

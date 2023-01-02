@@ -8,44 +8,37 @@
     <title>Weather App</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <main>
         <h1>Weather App</h1>
         <div class="container">
             <form>
-                <div class="input-group mb-3">
-                    <input type="text" class="form-control" id="query" placeholder="Enter a Location"
-                        aria-label="Location" aria-describedby="button-addon2">
-                    <button class="btn btn-outline-secondary" type="button" id="button-addon2">Submit</button>
-                </div>
+                <input type="text" class="form-control" id="query" placeholder="Enter a Location" aria-label="Location"
+                    aria-describedby="button-addon2">
+                <button class="btn btn-outline-secondary" type="button" id="button-addon2">Submit</button>
             </form>
         </div>
 
-        <div class="container">
+        <div id="weather-icon" class="container">
             <div class="img">
                 <img src="" alt="weather-icon" class="icon">
             </div>
         </div>
 
         <div class="container">
-            <div class="row">
-                <div class="col">
-                    <h3 class="name"></h3>
-                </div>
-                <div class="col">
-                    <h3 class="temp"></h3>
-                </div>
-                <div class="col">
-                    <h3 class="wind"></h3>
-                </div>
-                <div class="col">
-                    <h3 class="main"></h3>
-                </div>
-                <div class="col">
-                    <h3 class="description"></h3>
-                </div>
-            </div>
+            <label for="location">Location:</label>
+            <h3 id="location" class="name"></h3>
+            <label for="temperature">Temperature:</label>
+            <h3 id="temperature" class="temp"></h3>
+            <label for="wind">Wind:</label>
+            <h3 id="wind" class="wind"></h3>
+            <label for="weather-main">Main Weather:</label>
+            <h3 id="weather-main" class="main"></h3>
+            <label for="weather-description">Description:</label>
+            <h3 id="weather-description" class="description"></h3>
         </div>
+
     </main>
     <script src="./script.js"></script>
 </body>
