@@ -1,19 +1,14 @@
-body {
-    background: url(/bg.webp) no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-}
-
 main {
-    margin-top: 20px;
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
 }
 
 h1 {
-    text-align: center;
+    font-size: 3rem;
+    font-weight: bold;
+    margin: 0;
     font-family: cursive;
-    margin-top: 20px;
 }
 
 .container {
@@ -178,3 +173,80 @@ span {
     position: absolute;
     left: 174px;
 }
+
+/* Mobile layout (portrait and landscape) */
+/* @media (max-width: 767px) {
+    .clock-dial {
+        width: 250px;
+        height: 250px;
+    }
+
+    .hour {
+        font-size: 20px;
+    }
+
+    .hour-1 {
+        top: 20px;
+        right: 65px;
+    }
+
+    .hour-2 {
+        top: 60px;
+        right: 22px;
+    }
+
+    .hour-3 {
+        top: 117px;
+        right: 5px;
+    }
+
+    .hour-4 {
+        top: 173px;
+        right: 22px;
+    }
+
+    .hour-5 {
+        top: 213px;
+        right: 65px;
+    }
+
+    .hour-6 {
+        bottom: 5px;
+        left: 120px;
+    }
+
+    .hour-7 {
+        top: 213px;
+        left: 65px;
+    }
+
+    .hour-8 {
+        top: 173px;
+        left: 22px;
+    }
+
+    .hour-9 {
+        top: 117px;
+        left: 5px;
+    }
+
+    .hour-10 {
+        top: 60px;
+        left: 22px;
+    }
+
+    .hour-11 {
+        top: 20px;
+        left: 65px;
+    }
+
+    .hour-12 {
+        top: 5px;
+        left: 117px;
+    }
+
+    .point {
+        top: 120px;
+        left: 120px;
+    }
+} */
