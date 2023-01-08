@@ -1,0 +1,55 @@
+main {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin: 0;
+    font-family: cursive;
+}
+
+p {
+    font-size: 28px;
+    line-height: 1.5;
+    margin-top: 50px;
+}
+
+label {
+    display: inline-block;
+    width: 100px;
+    font-size: 26px;
+}
+
+input {
+    margin-top: 10px;
+    width: 250px;
+    font-size: 16px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    margin-top: 20px;
+    font-size: 16px;
+    background-color: #00b8d4;
+    color: #fff;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0095c6;
+}
+
+#qr-code {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    filter: drop-shadow(5px 5px 5px #222222);
+}
