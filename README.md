@@ -11,6 +11,7 @@
 - [Wifi QR Code Generator](./wifi%20qr%20code%20generator/index.html)
 - [Toggle Dark Mode](./toggle%20dark%20mode/index.html)
 - [Profile Card](./profile%20card/index.html)
+- [Chess Board](./chess%20board/index.html)
 - JavaScript Calculator
 - Grocery List
 - To-Do List
