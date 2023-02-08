@@ -10,6 +10,7 @@
 - [QQ Code Generator](./qr%20code%20generator/index.html)
 - [Wifi QR Code Generator](./wifi%20qr%20code%20generator/index.html)
 - [Toggle Dark Mode](./toggle%20dark%20mode/index.html)
+- [Profile Card](./profile%20card/index.html)
 - JavaScript Calculator
 - Grocery List
 - To-Do List
