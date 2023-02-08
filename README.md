@@ -9,3 +9,5 @@
 - [Image Slider](./image%20slider/index.html)
 - [QQ Code Generator](./qr%20code%20generator/index.html)
 - [Wifi QR Code Generator](./wifi%20qr%20code%20generator/index.html)
+- [Toggle Dark Mode](./toggle%20dark%20mode/index.html)
+
