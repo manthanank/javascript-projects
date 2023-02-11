@@ -12,6 +12,7 @@
 - [Toggle Dark Mode](./toggle%20dark%20mode/index.html)
 - [Profile Card](./profile%20card/index.html)
 - [Chess Board](./chess%20board/index.html)
+- [Digital Resume](./digital%20resume/index.html)
 - JavaScript Calculator
 - Grocery List
 - To-Do List
