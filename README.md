@@ -7,7 +7,7 @@
 - [Analog Clock](./analog%20clock/index.html)
 - [Tic Tac Toe](./tic%20tac%20toe/index.html)
 - [Image Slider](./image%20slider/index.html)
-- [QQ Code Generator](./qr%20code%20generator/index.html)
+- [QR Code Generator](./qr%20code%20generator/index.html)
 - [Wifi QR Code Generator](./wifi%20qr%20code%20generator/index.html)
 - [Toggle Dark Mode](./toggle%20dark%20mode/index.html)
 - [Profile Card](./profile%20card/index.html)
