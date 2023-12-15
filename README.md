@@ -27,7 +27,7 @@
 - World clock dashboard
 - Good morning slack bot
 - Daily Journal bot
-- Mail composer UI
+- [Mail composer UI](./mail%20composer%20ui/index.html)
 - Interactive form
 - Offline page in PWA
 - Toaster message
