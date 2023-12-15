@@ -21,7 +21,6 @@
 - JavaScript Quiz
 - E-Commerce website
 - Quote generator
-- Todo
 - Countdown
 - Stopwatch
 - Flip a coin
@@ -37,7 +36,6 @@
 - JSON viewer
 - Syntax highlight
 - JSON to csv
-- Calculator UI
 - Free image library
 - Messaging to webhook
 - Leave reason generator
@@ -58,9 +56,9 @@
 - Good first issue hunter
 - One download page for your fav exe
 - Virtual site map for fav sites
-- PWA - funny sounds directory,
-- Scolding app if late sleep,
-- Stress burster – tap me 20 times in 3 sec,
+- PWA - funny sounds directory
+- Scolding app if late sleep
+- Stress burster – tap me 20 times in 3 sec
 - Internet connection game
 - Quotes instead of loader
 - Comments thread UI
@@ -102,14 +100,3 @@
 - Movie rating at one place
 - Bookshelf
 - Energy drainer Visualization
-- YAGNI checklist
-- Tweet scheduler mock
-- Image crop tool
-- Windows blue screen error page
-- Never seen 404 page
-- Sarcastic 401 page
-- Play music when page offline
-- Render tweet into gif
-- CSS blob maker
-- Cute animals video search results
-- Portfolio Website
