@@ -14,7 +14,7 @@
 - [Chess Board](./chess%20board/index.html)
 - [Digital Resume](./digital%20resume/index.html)
 - JavaScript Calculator
-- Grocery List
+- [Grocery List](./grocery%20list/index.html)
 - To-Do List
 - JavaScript Form Validation
 - BMI Calculator
