@@ -15,7 +15,7 @@
 - [Digital Resume](./digital%20resume/index.html)
 - JavaScript Calculator
 - [Grocery List](./grocery%20list/index.html)
-- To-Do List
+- [To-Do List](./todo/index.html)
 - JavaScript Form Validation
 - BMI Calculator
 - JavaScript Quiz
