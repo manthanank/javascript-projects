@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,31 +8,26 @@
   <title>JavaScript Form Validation</title>
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
   <div class="form-container">
     <h1>JavaScript Form Validation</h1>
     <form id="myForm" onsubmit="return validateForm()">
-        <div>
-          <label for="name">Name:</label>
-          <input type="text" id="name" name="name">
-          <span id="nameError" class="error"></span>
-        </div>
-        <div>
-          <label for="email">Email:</label>
-          <input type="email" id="email" name="email">
-          <span id="emailError" class="error"></span>
-        </div>
-        <div>
-          <label for="password">Password:</label>
-          <input type="password" id="password" name="password">
-          <span id="passwordError" class="error"></span>
-        </div>
-        <button type="submit">Submit</button>
-      </form>
-      
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name">
+      <span id="nameError" class="error"></span>
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email">
+      <span id="emailError" class="error"></span>
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password">
+      <span id="passwordError" class="error"></span>
+      <button type="submit">Submit</button>
+    </form>
   </div>
 
   <script src="script.js"></script>
 </body>
+
 </html>
