@@ -13,7 +13,7 @@
 - [x] [Profile Card](./profile%20card/index.html)
 - [x] [Chess Board](./chess%20board/index.html)
 - [x] [Digital Resume](./digital%20resume/index.html)
-- [x] JavaScript Calculator
+- [ ] JavaScript Calculator
 - [x] [Grocery List](./grocery%20list/index.html)
 - [x] [To-Do List](./todo/index.html)
 - [ ] JavaScript Form Validation
