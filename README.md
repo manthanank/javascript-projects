@@ -18,7 +18,7 @@
 - [To-Do List](./todo/index.html)
 - [JavaScript Form Validation](./javascript%20form%20validation/index.html)
 - [BMI Calculator](./bmi%20calculator/index.html)
-- JavaScript Quiz
+- [JavaScript Quiz](./javascript%20quiz/index.html)
 - E-Commerce website
 - Quote generator
 - Countdown
