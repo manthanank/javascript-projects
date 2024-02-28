@@ -17,7 +17,7 @@
 - [Grocery List](./grocery%20list/index.html)
 - [To-Do List](./todo/index.html)
 - [JavaScript Form Validation](./javascript%20form%20validation/index.html)
-- BMI Calculator
+- [BMI Calculator](./bmi%20calculator/index.html)
 - JavaScript Quiz
 - E-Commerce website
 - Quote generator
