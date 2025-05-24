@@ -22,7 +22,7 @@
 - E-Commerce website
 - Quote generator
 - [Countdown](./countdown/index.html)
-- Stopwatch
+- [Stopwatch](./stopwatch/index.html)
 - Flip a coin
 - World clock dashboard
 - Good morning slack bot
