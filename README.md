@@ -21,7 +21,7 @@
 - [JavaScript Quiz](./javascript%20quiz/index.html)
 - E-Commerce website
 - Quote generator
-- Countdown
+- [Countdown](./countdown/index.html)
 - Stopwatch
 - Flip a coin
 - World clock dashboard
