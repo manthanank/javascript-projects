@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Projects Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">        <header class="header">
+            <div class="header-top">
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark/light mode">
+                    <i class="fas fa-moon"></i>
+                    <i class="fas fa-sun"></i>
+                </button>
+            </div>
+            <h1 class="title">
+                <i class="fab fa-js-square"></i>
+                JavaScript Projects Portfolio
+            </h1>
+            <p class="subtitle">A collection of interactive web applications and games</p>
+        </header>
+
+        <div class="search-container">
+            <div class="search-box">
+                <i class="fas fa-search"></i>
+                <input type="text" id="searchInput" placeholder="Search projects...">
+            </div>
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">All Projects</button>
+                <button class="filter-btn" data-filter="utility">Utilities</button>
+                <button class="filter-btn" data-filter="game">Games</button>
+                <button class="filter-btn" data-filter="ui">UI Components</button>
+                <button class="filter-btn" data-filter="calculator">Calculators</button>
+            </div>
+        </div>
+
+        <div class="stats">
+            <div class="stat-item">
+                <span class="stat-number" id="totalProjects">0</span>
+                <span class="stat-label">Total Projects</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number" id="visibleProjects">0</span>
+                <span class="stat-label">Visible Projects</span>
+            </div>
+        </div>
+
+        <div class="projects-grid" id="projectsGrid">
+            <!-- Projects will be dynamically inserted here -->
+        </div>        <footer class="footer">
+            <p>&copy; 2025 JavaScript Projects Portfolio. Built with ❤️ and vanilla JavaScript.</p>
+            <div class="keyboard-shortcuts">
+                <p>Keyboard shortcuts: <span class="shortcut"><kbd>Ctrl</kbd>+<kbd>K</kbd> Search</span> <span class="shortcut"><kbd>Ctrl</kbd>+<kbd>D</kbd> Toggle Theme</span> <span class="shortcut"><kbd>Ctrl</kbd>+<kbd>1-5</kbd> Filter Categories</span></p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
