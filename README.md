@@ -23,7 +23,7 @@
 - Quote generator
 - [Countdown](./countdown/index.html)
 - [Stopwatch](./stopwatch/index.html)
-- Flip a coin
+- [Flip a coin](./flip%20a%20coin/index.html)
 - World clock dashboard
 - Good morning slack bot
 - Daily Journal bot
@@ -100,3 +100,30 @@
 - Movie rating at one place
 - Bookshelf
 - Energy drainer Visualization
+
+## 🚀 Getting Started
+
+1. Clone this repository
+2. Navigate to any project folder
+3. Open the `index.html` file in your browser
+4. Enjoy exploring the projects!
+
+## 🛠️ Technologies Used
+
+- HTML5
+- CSS3
+- Vanilla JavaScript
+- Various APIs for specific projects
+
+## 📝 Contributing
+
+Feel free to contribute by:
+
+- Adding new projects
+- Improving existing projects
+- Fixing bugs
+- Enhancing documentation
+
+## 📄 License
+
+This project is open source and available under the [MIT License](LICENSE).
