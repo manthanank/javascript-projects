@@ -1,0 +1,31 @@
+{
+  "name": "javascript-projects",
+  "version": "1.0.0",
+  "description": "A collection of small JavaScript projects for learning and practice",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/manthanank/javascript-projects.git"
+  },
+  "keywords": [
+    "javascript",
+    "html",
+    "css",
+    "web-development",
+    "learning",
+    "projects"
+  ],
+  "author": "Manthan Ankolekar",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/manthanank/javascript-projects/issues"
+  },
+  "homepage": "https://github.com/manthanank/javascript-projects#readme",
+  "devDependencies": {
+    "eslint": "^8.50.0"
+  }
+}

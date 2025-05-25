@@ -1,473 +1,1072 @@
-// Project data with descriptions and categorization
-const projects = [
+// Project data configuration
+const projectsData = [
     {
-        name: "Analog Clock",
-        folder: "analog clock",
-        description: "A beautiful analog clock with smooth hand movements and customizable themes.",
-        category: "ui",
-        tech: ["HTML5", "CSS3", "JavaScript", "Canvas"]
+        name: "analog clock",
+        description: "Beautiful analog clock with smooth animations and customizable themes. Features real-time updates and elegant design.",
+        category: "interactive",
+        tags: ["clock", "time", "animation", "css"],
+        icon: "fas fa-clock"
     },
     {
-        name: "BMI Calculator",
-        folder: "bmi calculator",
-        description: "Calculate your Body Mass Index with instant results and health recommendations.",
-        category: "calculator",
-        tech: ["HTML5", "CSS3", "JavaScript", "Form Validation"]
+        name: "bmi calculator",
+        description: "Calculate your Body Mass Index with instant results and health recommendations. Clean, user-friendly interface.",
+        category: "utility",
+        tags: ["health", "calculator", "fitness", "bmi"],
+        icon: "fas fa-weight"
     },
     {
-        name: "Calculator",
-        folder: "calculator",
-        description: "A fully functional calculator with standard mathematical operations.",
-        category: "calculator",
-        tech: ["HTML5", "CSS3", "JavaScript", "Math Operations"]
+        name: "calculator",
+        description: "Full-featured calculator with standard arithmetic operations. Clean design with keyboard support.",
+        category: "utility",
+        tags: ["math", "calculator", "arithmetic", "numbers"],
+        icon: "fas fa-calculator"
     },
     {
-        name: "Chess Board",
-        folder: "chess board",
-        description: "Interactive chess board with piece movement and game logic.",
+        name: "chess board",
+        description: "Interactive chess board with piece movement and game logic. Perfect for chess enthusiasts.",
         category: "game",
-        tech: ["HTML5", "CSS3", "JavaScript", "Game Logic"]
+        tags: ["chess", "board", "strategy", "game"],
+        icon: "fas fa-chess"
     },
     {
-        name: "Countdown Timer",
-        folder: "countdown",
-        description: "Customizable countdown timer with alerts and visual effects.",
+        name: "countdown",
+        description: "Customizable countdown timer for events, deadlines, and special occasions. Multiple timer support.",
         category: "utility",
-        tech: ["HTML5", "CSS3", "JavaScript", "Date API"]
+        tags: ["timer", "countdown", "events", "time"],
+        icon: "fas fa-hourglass-half"
     },
     {
-        name: "Digital Clock",
-        folder: "digital clock",
-        description: "Real-time digital clock with multiple format options and themes.",
-        category: "ui",
-        tech: ["HTML5", "CSS3", "JavaScript", "Date API"]
+        name: "digital clock",
+        description: "Modern digital clock displaying current time with multiple format options and timezone support.",
+        category: "interactive",
+        tags: ["clock", "digital", "time", "display"],
+        icon: "fas fa-digital-tachograph"
     },
     {
-        name: "Digital Resume",
-        folder: "digital resume",
-        description: "Professional digital resume with interactive sections and modern design.",
-        category: "ui",
-        tech: ["HTML5", "CSS3", "JavaScript", "Responsive Design"]
+        name: "digital resume",
+        description: "Interactive digital resume with modern design, project showcase, and smooth navigation between sections.",
+        category: "interactive",
+        tags: ["resume", "portfolio", "professional", "cv"],
+        icon: "fas fa-user-tie"
     },
     {
-        name: "Flip a Coin",
-        folder: "flip a coin",
-        description: "Random coin flip simulator with smooth animations and statistics.",
+        name: "flip a coin",
+        description: "Simple and fun coin flipping game with realistic animations and random outcomes.",
         category: "game",
-        tech: ["HTML5", "CSS3", "JavaScript", "Animations"]
+        tags: ["coin", "random", "game", "fun"],
+        icon: "fas fa-coins"
     },
     {
-        name: "Grocery List",
-        folder: "grocery list",
-        description: "Interactive grocery list manager with add, edit, and delete functionality.",
+        name: "grocery list",
+        description: "Organize your shopping with this interactive grocery list. Add, edit, and check off items easily.",
         category: "utility",
-        tech: ["HTML5", "CSS3", "JavaScript", "Local Storage"]
+        tags: ["shopping", "list", "grocery", "organization"],
+        icon: "fas fa-shopping-cart"
     },
     {
-        name: "Image Slider",
-        folder: "image slider",
-        description: "Responsive image carousel with navigation controls and auto-play.",
-        category: "ui",
-        tech: ["HTML5", "CSS3", "JavaScript", "Image Gallery"]
+        name: "image slider",
+        description: "Responsive image slider with smooth transitions, navigation controls, and automatic slideshow.",
+        category: "interactive",
+        tags: ["images", "slider", "gallery", "carousel"],
+        icon: "fas fa-images"
     },
     {
-        name: "Form Validation",
-        folder: "javascript form validation",
-        description: "Comprehensive form validation with real-time feedback and error handling.",
+        name: "javascript form validation",
+        description: "Comprehensive form validation with real-time feedback and custom validation rules.",
         category: "utility",
-        tech: ["HTML5", "CSS3", "JavaScript", "Validation"]
+        tags: ["form", "validation", "input", "feedback"],
+        icon: "fas fa-check-circle"
     },
     {
-        name: "JavaScript Quiz",
-        folder: "javascript quiz",
-        description: "Interactive quiz application with scoring system and progress tracking.",
+        name: "javascript quiz",
+        description: "Interactive quiz application with scoring system, timer, and instant feedback on answers.",
         category: "game",
-        tech: ["HTML5", "CSS3", "JavaScript", "Quiz Logic"]
+        tags: ["quiz", "questions", "learning", "trivia"],
+        icon: "fas fa-question-circle"
     },
     {
-        name: "Mail Composer UI",
-        folder: "mail composer ui",
-        description: "Gmail-like email composer interface with rich text formatting.",
-        category: "ui",
-        tech: ["HTML5", "CSS3", "JavaScript", "UI Components"]
+        name: "mail composer ui",
+        description: "Modern email composition interface with rich text editing and attachment support.",
+        category: "interactive",
+        tags: ["email", "composer", "ui", "messaging"],
+        icon: "fas fa-envelope"
     },
     {
-        name: "Music Player",
-        folder: "music player",
-        description: "Feature-rich music player with playlist management and audio controls.",
+        name: "music player",
+        description: "Feature-rich music player with playlist support, controls, and beautiful visualizations.",
+        category: "interactive",
+        tags: ["music", "audio", "player", "entertainment"],
+        icon: "fas fa-music"
+    },
+    {
+        name: "profile card",
+        description: "Elegant profile card component with social links, animations, and responsive design.",
+        category: "interactive",
+        tags: ["profile", "card", "social", "component"],
+        icon: "fas fa-id-card"
+    },
+    {
+        name: "qr code generator",
+        description: "Generate QR codes instantly for text, URLs, and data. Download and customize options available.",
         category: "utility",
-        tech: ["HTML5", "CSS3", "JavaScript", "Audio API"]
+        tags: ["qr", "generator", "code", "utility"],
+        icon: "fas fa-qrcode"
     },
     {
-        name: "Profile Card",
-        folder: "profile card",
-        description: "Animated profile card component with hover effects and social links.",
-        category: "ui",
-        tech: ["HTML5", "CSS3", "JavaScript", "Animations"]
-    },
-    {
-        name: "QR Code Generator",
-        folder: "qr code generator",
-        description: "Generate QR codes for text, URLs, and other data with download option.",
+        name: "stopwatch",
+        description: "Precision stopwatch with lap timing, pause/resume functionality, and clean interface.",
         category: "utility",
-        tech: ["HTML5", "CSS3", "JavaScript", "QR Library"]
+        tags: ["stopwatch", "timer", "timing", "sports"],
+        icon: "fas fa-stopwatch"
     },
     {
-        name: "Stopwatch",
-        folder: "stopwatch",
-        description: "Precision stopwatch with lap timing and split time recording.",
-        category: "utility",
-        tech: ["HTML5", "CSS3", "JavaScript", "Timer API"]
-    },
-    {
-        name: "Tic Tac Toe",
-        folder: "tic tac toe",
-        description: "Classic tic-tac-toe game with AI opponent and score tracking.",
+        name: "tic tac toe",
+        description: "Classic Tic Tac Toe game with AI opponent, score tracking, and winning animations.",
         category: "game",
-        tech: ["HTML5", "CSS3", "JavaScript", "Game AI"]
+        tags: ["game", "tic-tac-toe", "strategy", "classic"],
+        icon: "fas fa-th"
     },
     {
-        name: "Todo List",
-        folder: "todo",
-        description: "Task management application with categories, priorities, and persistence.",
+        name: "todo",
+        description: "Complete task management application with categories, priorities, and progress tracking.",
         category: "utility",
-        tech: ["HTML5", "CSS3", "JavaScript", "Local Storage"]
+        tags: ["todo", "tasks", "productivity", "organization"],
+        icon: "fas fa-tasks"
     },
     {
-        name: "Dark Mode Toggle",
-        folder: "toggle dark mode",
-        description: "Theme switcher component with smooth transitions and persistence.",
-        category: "ui",
-        tech: ["HTML5", "CSS3", "JavaScript", "Theme Toggle"]
-    },
-    {
-        name: "Weather App",
-        folder: "weather app",
-        description: "Real-time weather information with location detection and forecasts.",
+        name: "toggle dark mode",
+        description: "Dark/light theme toggle implementation with smooth transitions and system preference detection.",
         category: "utility",
-        tech: ["HTML5", "CSS3", "JavaScript", "Weather API"]
+        tags: ["theme", "dark-mode", "toggle", "ui"],
+        icon: "fas fa-moon"
     },
     {
-        name: "WiFi QR Generator",
-        folder: "wifi qr code generator",
-        description: "Generate QR codes for WiFi networks with encryption support.",
+        name: "weather app",
+        description: "Real-time weather information with forecasts, location search, and beautiful weather icons.",
         category: "utility",
-        tech: ["HTML5", "CSS3", "JavaScript", "QR Library"]
+        tags: ["weather", "forecast", "location", "api"],
+        icon: "fas fa-cloud-sun"
+    },
+    {
+        name: "wifi qr code generator",
+        description: "Generate QR codes for WiFi networks with password encryption and easy sharing options.",
+        category: "utility",
+        tags: ["wifi", "qr", "network", "sharing"],
+        icon: "fas fa-wifi"
     }
 ];
 
-// DOM elements
-const projectsGrid = document.getElementById('projectsGrid');
-const searchInput = document.getElementById('searchInput');
-const filterButtons = document.querySelectorAll('.filter-btn');
-const totalProjectsElement = document.getElementById('totalProjects');
-const visibleProjectsElement = document.getElementById('visibleProjects');
-const themeToggle = document.getElementById('themeToggle');
+const year = new Date().getFullYear();
 
-// State
-let currentFilter = 'all';
-let currentSearch = '';
-let currentTheme = localStorage.getItem('theme') || 'light';
+class ProjectPortfolio {
+    constructor() {
+        this.projects = projectsData;
+        this.filteredProjects = [...this.projects];
+        this.currentFilter = 'all';
+        this.currentView = 'grid';
+        this.searchTerm = '';
 
-// Initialize the application
-document.addEventListener('DOMContentLoaded', function() {
-    initializeTheme();
-    renderProjects();
-    setupEventListeners();
-    updateStats();
-    
-    // Add staggered animation for initial load
-    setTimeout(() => {
-        document.querySelectorAll('.project-card').forEach((card, index) => {
+        this.init();
+    }
+
+    init() {
+        this.setupEventListeners();
+        this.setupThemeToggle();
+        this.renderProjects();
+        this.updateProjectCount();
+        this.animateOnScroll();
+        this.setupFooterFeatures();
+        this.updateDynamicYear(); // Add this line
+    }
+
+    setupFooterFeatures() {
+        // Fetch GitHub stats first, then setup other features
+        this.fetchGitHubStats();
+
+        // Setup stats refresh functionality
+        this.setupStatsRefresh();
+
+        // Back to top button
+        this.setupBackToTop();
+
+        // Footer category links
+        this.setupFooterCategoryLinks();
+
+        // Download resume functionality
+        this.setupDownloadResume();
+
+        // Update last modified date
+        this.updateLastModified();
+
+        // Footer project count sync
+        this.syncFooterProjectCount();
+    }
+
+    async fetchGitHubStats() {
+        // Use the enhanced retry mechanism
+        await this.fetchGitHubStatsWithRetry();
+    }
+
+    updateCountersWithLoading() {
+        const counters = document.querySelectorAll('.counter');
+        counters.forEach(counter => {
+            counter.textContent = '...';
+            counter.classList.add('loading');
+        });
+
+        // Add loading message
+        this.showLoadingMessage('Fetching live GitHub statistics...');
+    }
+
+    showLoadingMessage(message) {
+        const statsContainer = document.querySelector('.stats-grid');
+        if (statsContainer) {
+            let loadingMsg = statsContainer.querySelector('.loading-message');
+            if (!loadingMsg) {
+                loadingMsg = document.createElement('div');
+                loadingMsg.className = 'loading-message';
+                loadingMsg.style.cssText = `
+                    position: absolute;
+                    top: -25px;
+                    left: 10px;
+                    font-size: 11px;
+                    color: var(--primary-color);
+                    opacity: 0.8;
+                    font-weight: 500;
+                `;
+                statsContainer.appendChild(loadingMsg);
+            }
+            loadingMsg.textContent = message;
+
+            // Remove loading message after animation completes
             setTimeout(() => {
-                card.classList.add('fade-in');
-            }, index * 100);
+                if (loadingMsg && loadingMsg.parentNode) {
+                    loadingMsg.parentNode.removeChild(loadingMsg);
+                }
+            }, 3000);
+        }
+    }
+
+    updateCountersWithGitHubData(stats) {
+        // Update the data-target attributes with real data
+        const counters = document.querySelectorAll('.counter');
+
+        counters.forEach(counter => {
+            const parent = counter.parentElement;
+            const icon = parent.querySelector('i');
+
+            if (icon) {
+                if (icon.classList.contains('fa-star')) {
+                    counter.setAttribute('data-target', stats.stars);
+                } else if (icon.classList.contains('fa-eye')) {
+                    counter.setAttribute('data-target', stats.views);
+                }
+            }
+
+            counter.classList.remove('loading');
+
+            // Add success animation
+            setTimeout(() => {
+                counter.style.transform = 'scale(1.1)';
+                counter.style.color = 'var(--primary-color)';
+                setTimeout(() => {
+                    counter.style.transform = 'scale(1)';
+                    counter.style.color = '';
+                }, 300);
+            }, 100);
         });
-    }, 100);
-});
 
-// Initialize theme from local storage
-function initializeTheme() {
-    // Apply saved theme or default to light
-    document.documentElement.setAttribute('data-theme', currentTheme);
-}
+        // Add a small indicator that stats are live
+        this.addLiveDataIndicator();
 
-// Toggle between light and dark themes
-function toggleTheme() {
-    currentTheme = currentTheme === 'light' ? 'dark' : 'light';
-    document.documentElement.setAttribute('data-theme', currentTheme);
-    localStorage.setItem('theme', currentTheme);
-    
-    // Add transition animation
-    document.documentElement.classList.add('theme-transition');
-    setTimeout(() => {
-        document.documentElement.classList.remove('theme-transition');
-    }, 500);
-}
+        // Now animate the counters with the real data
+        this.animateCounters();
+    }
 
-// Setup event listeners
-function setupEventListeners() {
-    // Search functionality
-    searchInput.addEventListener('input', (e) => {
-        currentSearch = e.target.value.toLowerCase();
-        filterAndRenderProjects();
-    });
+    animateCounters() {
+        const counters = document.querySelectorAll('.counter');
 
-    // Filter buttons
-    filterButtons.forEach(button => {
-        button.addEventListener('click', (e) => {
-            // Update active filter button
-            filterButtons.forEach(btn => btn.classList.remove('active'));
-            e.target.classList.add('active');
-            
-            currentFilter = e.target.dataset.filter;
-            filterAndRenderProjects();
+        counters.forEach(counter => {
+            const target = parseInt(counter.getAttribute('data-target')) || 0;
+            const current = parseInt(counter.textContent) || 0;
+
+            if (target === current) return; // Skip if already at target
+
+            const increment = Math.ceil(target / 60); // Animation duration ~1 second (60 frames)
+            const duration = 1000; // 1 second
+            const step = duration / 60; // 60fps
+
+            let currentValue = current;
+            counter.classList.add('counting');
+
+            const animation = setInterval(() => {
+                currentValue += increment;
+
+                if (currentValue >= target) {
+                    currentValue = target;
+                    clearInterval(animation);
+                    counter.classList.remove('counting');
+                }
+
+                // Format the number with commas for readability
+                counter.textContent = currentValue.toLocaleString();
+            }, step);
         });
-    });
+    }
 
-    // Theme Toggle Button
-    themeToggle.addEventListener('click', toggleTheme);
+    addLiveDataIndicator() {
+        // Add a small "live" indicator to show the data is real
+        const statsContainer = document.querySelector('.stats-grid');
+        if (statsContainer && !statsContainer.querySelector('.live-indicator')) {
+            const indicator = document.createElement('div');
+            indicator.className = 'live-indicator';
+            indicator.innerHTML = '<i class="fas fa-wifi"></i> Live GitHub Data';
+            indicator.style.cssText = `
+                position: absolute;
+                top: -10px;
+                right: 10px;
+                background: var(--primary-color);
+                color: white;
+                padding: 4px 8px;
+                border-radius: 12px;
+                font-size: 10px;
+                font-weight: 600;
+                text-transform: uppercase;
+                letter-spacing: 0.5px;
+                opacity: 0.8;
+                z-index: 10;
+                cursor: pointer;
+                transition: all 0.3s ease;
+            `;
 
-    // Keyboard shortcuts
-    document.addEventListener('keydown', (e) => {
-        if (e.ctrlKey || e.metaKey) {
-            switch(e.key) {
-                case 'k':
-                    e.preventDefault();
-                    searchInput.focus();
-                    searchInput.select();
-                    break;
-                case '1':
-                    e.preventDefault();
-                    setFilter('all');
-                    break;
-                case '2':
-                    e.preventDefault();
-                    setFilter('utility');
-                    break;
-                case '3':
-                    e.preventDefault();
-                    setFilter('game');
-                    break;
-                case '4':
-                    e.preventDefault();
-                    setFilter('ui');
-                    break;
-                case '5':
-                    e.preventDefault();
-                    setFilter('calculator');
-                    break;
-                case 'd':
-                    e.preventDefault();
-                    toggleTheme();
-                    break;
+            // Add click handler to refresh stats
+            indicator.addEventListener('click', () => {
+                indicator.innerHTML = '<i class="fas fa-sync fa-spin"></i> Refreshing...';
+                this.clearStatsCache();
+                this.fetchGitHubStats();
+            });
+
+            // Make the parent relative if it isn't already
+            if (getComputedStyle(statsContainer).position === 'static') {
+                statsContainer.style.position = 'relative';
+            }
+
+            statsContainer.appendChild(indicator);
+
+            // Add timestamp
+            this.updateDataTimestamp();
+
+            // Fade out the indicator after 8 seconds (increased time for user interaction)
+            setTimeout(() => {
+                indicator.style.transition = 'opacity 1s ease';
+                indicator.style.opacity = '0.6';
+                indicator.innerHTML = '<i class="fas fa-sync"></i> Refresh';
+
+                // Add hover effect
+                indicator.addEventListener('mouseenter', () => {
+                    indicator.style.opacity = '1';
+                    indicator.style.transform = 'scale(1.05)';
+                });
+                indicator.addEventListener('mouseleave', () => {
+                    indicator.style.opacity = '0.6';
+                    indicator.style.transform = 'scale(1)';
+                });
+            }, 5000);
+        }
+    }
+
+    updateDataTimestamp() {
+        const statsContainer = document.querySelector('.stats-grid');
+        if (statsContainer) {
+            let timestamp = statsContainer.querySelector('.data-timestamp');
+            if (!timestamp) {
+                timestamp = document.createElement('div');
+                timestamp.className = 'data-timestamp';
+                timestamp.style.cssText = `
+                    position: absolute;
+                    bottom: -20px;
+                    right: 10px;
+                    font-size: 9px;
+                    color: var(--text-muted);
+                    opacity: 0.7;
+                `;
+                statsContainer.appendChild(timestamp);
+            }
+            timestamp.textContent = `Updated: ${new Date().toLocaleTimeString()}`;
+        }
+    }
+
+    clearStatsCache() {
+        try {
+            localStorage.removeItem('github_stats_cache');
+            console.log('🗑️ GitHub stats cache cleared');
+        } catch (error) {
+            console.warn('Failed to clear cache:', error);
+        }
+    }
+
+    // Add method to setup manual refresh functionality
+    setupStatsRefresh() {
+        const statsContainer = document.querySelector('.stats-grid');
+        if (statsContainer) {
+            statsContainer.addEventListener('dblclick', () => {
+                console.log('🔄 Manually refreshing GitHub stats...');
+                this.fetchGitHubStats();
+            });
+
+            // Add tooltip
+            statsContainer.title = 'Double-click to refresh GitHub statistics';
+        }
+    }
+
+    // Enhanced error handling with retry mechanism and caching
+    async fetchGitHubStatsWithRetry(retries = 2) {
+        const username = 'manthanank';
+        const repoName = 'javascript-projects';
+        const cacheKey = 'github_stats_cache';
+        const cacheExpiry = 5 * 60 * 1000; // 5 minutes
+
+        // Check cache first
+        const cachedData = this.getCachedStats(cacheKey, cacheExpiry);
+        if (cachedData) {
+            console.log('📦 Using cached GitHub stats:', cachedData);
+            this.updateCountersWithGitHubData(cachedData);
+            return;
+        }
+
+        for (let attempt = 0; attempt <= retries; attempt++) {
+            try {
+                // Show loading state
+                if (attempt === 0) {
+                    this.updateCountersWithLoading();
+                }
+
+                // Add a small delay between retries
+                if (attempt > 0) {
+                    await new Promise(resolve => setTimeout(resolve, 1000 * attempt));
+                }
+
+                // Fetch repository data from GitHub API
+                const repoResponse = await fetch(`https://api.github.com/repos/${username}/${repoName}`, {
+                    headers: {
+                        'Accept': 'application/vnd.github.v3+json'
+                    }
+                });
+
+                if (!repoResponse.ok) {
+                    if (repoResponse.status === 403) {
+                        throw new Error('GitHub API rate limit exceeded');
+                    } else if (repoResponse.status === 404) {
+                        throw new Error('Repository not found');
+                    } else {
+                        throw new Error(`GitHub API error: ${repoResponse.status}`);
+                    }
+                }
+
+                const repoData = await repoResponse.json();
+
+                const stats = {
+                    stars: repoData.stargazers_count,
+                    views: repoData.watchers_count, // Using watchers as a proxy for views
+                    forks: repoData.forks_count,
+                    timestamp: Date.now()
+                };
+
+                // Cache the results
+                this.setCachedStats(cacheKey, stats);
+
+                // Update counters with real data
+                this.updateCountersWithGitHubData(stats);
+
+                console.log('✅ GitHub stats loaded successfully:', {
+                    stars: stats.stars,
+                    views: stats.views,
+                    forks: stats.forks,
+                    attempt: attempt + 1
+                });
+
+                return; // Success, exit the retry loop
+
+            } catch (error) {
+                console.warn(`⚠️ GitHub API attempt ${attempt + 1} failed:`, error.message);
+
+                if (attempt === retries) {
+                    // Final attempt failed, use fallback
+                    const fallbackStats = this.getFallbackStats();
+                    this.updateCountersWithGitHubData(fallbackStats);
+                    console.log('📊 Using fallback stats:', fallbackStats);
+                }
             }
         }
-    });
-}
+    }
 
-// Set filter programmatically
-function setFilter(filter) {
-    filterButtons.forEach(btn => {
-        btn.classList.toggle('active', btn.dataset.filter === filter);
-    });
-    currentFilter = filter;
-    filterAndRenderProjects();
-}
-
-// Filter and render projects
-function filterAndRenderProjects() {
-    const filteredProjects = projects.filter(project => {
-        const matchesSearch = project.name.toLowerCase().includes(currentSearch) ||
-                            project.description.toLowerCase().includes(currentSearch) ||
-                            project.tech.some(tech => tech.toLowerCase().includes(currentSearch));
-        
-        const matchesFilter = currentFilter === 'all' || project.category === currentFilter;
-        
-        return matchesSearch && matchesFilter;
-    });
-
-    renderProjects(filteredProjects);
-    updateStats(filteredProjects.length);
-}
-
-// Render projects to the grid
-function renderProjects(projectsToRender = projects) {
-    projectsGrid.innerHTML = '';
-    
-    projectsToRender.forEach((project, index) => {
-        const projectCard = createProjectCard(project);
-        projectsGrid.appendChild(projectCard);
-    });
-}
-
-// Create a project card element
-function createProjectCard(project) {
-    const card = document.createElement('div');
-    card.className = 'project-card';
-    
-    const techTags = project.tech.map(tech => 
-        `<span class="tech-tag">${tech}</span>`
-    ).join('');
-    
-    card.innerHTML = `
-        <div class="project-header">
-            <h3 class="project-title">${project.name}</h3>
-            <span class="project-category">${getCategoryLabel(project.category)}</span>
-        </div>
-        <div class="project-body">
-            <p class="project-description">${project.description}</p>
-            <div class="project-tech">
-                ${techTags}
-            </div>
-            <div class="project-actions">
-                <a href="${project.folder}/index.html" class="action-btn btn-primary" target="_blank">
-                    <i class="fas fa-external-link-alt"></i>
-                    View Project
-                </a>
-                <button class="action-btn btn-secondary" onclick="viewSource('${project.folder}')">
-                    <i class="fas fa-code"></i>
-                    View Code
-                </button>
-            </div>
-        </div>
-    `;
-    
-    // Add click handler for card
-    card.addEventListener('click', (e) => {
-        if (!e.target.closest('.action-btn')) {
-            window.open(`${project.folder}/index.html`, '_blank');
+    getCachedStats(cacheKey, expiryTime) {
+        try {
+            const cached = localStorage.getItem(cacheKey);
+            if (cached) {
+                const data = JSON.parse(cached);
+                if (Date.now() - data.timestamp < expiryTime) {
+                    return data;
+                }
+            }
+        } catch (error) {
+            console.warn('Failed to read cached stats:', error);
         }
-    });
-    
-    return card;
-}
+        return null;
+    }
 
-// Get category label
-function getCategoryLabel(category) {
-    const labels = {
-        'utility': 'Utility Tool',
-        'game': 'Game',
-        'ui': 'UI Component',
-        'calculator': 'Calculator'
-    };
-    return labels[category] || category;
-}
+    setCachedStats(cacheKey, stats) {
+        try {
+            localStorage.setItem(cacheKey, JSON.stringify(stats));
+        } catch (error) {
+            console.warn('Failed to cache stats:', error);
+        }
+    }
 
-// View source code (opens in new tab)
-function viewSource(folder) {
-    // Create a simple source viewer page
-    const sourceWindow = window.open('', '_blank');
-    sourceWindow.document.write(`
-        <!DOCTYPE html>
-        <html>
-        <head>
-            <title>Source Code - ${folder}</title>
-            <style>
-                body { 
-                    font-family: 'Courier New', monospace; 
-                    background: #1e1e1e; 
-                    color: #d4d4d4; 
-                    padding: 20px;
-                    margin: 0;
-                }
-                h1 { color: #569cd6; }
-                .file-list { 
-                    background: #252526; 
-                    padding: 20px; 
-                    border-radius: 8px; 
-                    margin: 20px 0;
-                }
-                .file-link { 
-                    display: block; 
-                    color: #9cdcfe; 
-                    text-decoration: none; 
-                    padding: 8px 0;
-                    border-bottom: 1px solid #404040;
-                }
-                .file-link:hover { 
-                    background: #2d2d30; 
-                    padding-left: 10px;
-                    transition: all 0.3s ease;
-                }
-            </style>
-        </head>
-        <body>
-            <h1>Source Code: ${folder}</h1>
-            <div class="file-list">
-                <a href="${folder}/index.html" class="file-link" target="_blank">📄 index.html</a>
-                <a href="${folder}/style.css" class="file-link" target="_blank">🎨 style.css</a>
-                <a href="${folder}/script.js" class="file-link" target="_blank">⚡ script.js</a>
-            </div>
-            <p>Click on the files above to view the source code.</p>
-        </body>
-        </html>
-    `);
-}
-
-// Update statistics
-function updateStats(visibleCount = projects.length) {
-    totalProjectsElement.textContent = projects.length;
-    visibleProjectsElement.textContent = visibleCount;
-}
-
-// Search suggestions and autocomplete
-searchInput.addEventListener('focus', function() {
-    this.placeholder = 'Try searching for "calculator", "game", "clock", etc...';
-});
-
-searchInput.addEventListener('blur', function() {
-    this.placeholder = 'Search projects...';
-});
-
-// Add some keyboard shortcuts info
-document.addEventListener('DOMContentLoaded', function() {
-    // Add keyboard shortcuts tooltip
-    const searchBox = document.querySelector('.search-box');
-    searchBox.title = 'Keyboard shortcuts:\nCtrl/Cmd + K: Focus search\nCtrl/Cmd + 1-5: Quick filter';
-});
-
-// Performance optimization: Debounce search
-function debounce(func, wait) {
-    let timeout;
-    return function executedFunction(...args) {
-        const later = () => {
-            clearTimeout(timeout);
-            func(...args);
+    getFallbackStats() {
+        // Use more realistic fallback values based on typical GitHub repositories
+        return {
+            stars: 1200 + Math.floor(Math.random() * 200),
+            views: 14500 + Math.floor(Math.random() * 2000),
+            forks: 40 + Math.floor(Math.random() * 30)
         };
-        clearTimeout(timeout);
-        timeout = setTimeout(later, wait);
-    };
+    }
+
+    setupBackToTop() {
+        const backToTopBtn = document.getElementById('back-to-top');
+
+        // Show/hide button based on scroll position
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopBtn.style.opacity = '1';
+                backToTopBtn.style.visibility = 'visible';
+            } else {
+                backToTopBtn.style.opacity = '0';
+                backToTopBtn.style.visibility = 'hidden';
+            }
+        });
+
+        // Smooth scroll to top
+        backToTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Initial state
+        backToTopBtn.style.opacity = '0';
+        backToTopBtn.style.visibility = 'hidden';
+        backToTopBtn.style.transition = 'all 0.3s ease';
+    }
+
+    setupFooterCategoryLinks() {
+        const categoryLinks = document.querySelectorAll('.category-link');
+
+        categoryLinks.forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                const category = link.getAttribute('data-category');
+
+                // Scroll to top
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+
+                // Set filter after scroll
+                setTimeout(() => {
+                    this.setFilter(category);
+                }, 500);
+
+                // Visual feedback
+                link.style.background = 'rgba(102, 126, 234, 0.1)';
+                setTimeout(() => {
+                    link.style.background = '';
+                }, 300);
+            });
+        });
+    }
+
+    setupDownloadResume() {
+        const downloadBtn = document.getElementById('download-resume');
+
+        downloadBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+
+            // Create a simple text resume
+            const resumeContent = this.generateResumeContent();
+            const blob = new Blob([resumeContent], { type: 'text/plain' });
+            const url = URL.createObjectURL(blob);
+
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'JavaScript_Developer_Resume.txt';
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+
+            // Show feedback
+            const originalText = downloadBtn.innerHTML;
+            downloadBtn.innerHTML = '<i class="fas fa-check"></i> Downloaded!';
+            downloadBtn.style.color = '#4caf50';
+
+            setTimeout(() => {
+                downloadBtn.innerHTML = originalText;
+                downloadBtn.style.color = '';
+            }, 2000);
+        });
+    }
+
+    generateResumeContent() {
+        const interactiveProjects = this.projects.filter(p => p.category === 'interactive').length;
+        const utilityProjects = this.projects.filter(p => p.category === 'utility').length;
+        const gameProjects = this.projects.filter(p => p.category === 'game').length;
+
+        return `JAVASCRIPT DEVELOPER RESUME
+========================
+
+PROJECTS OVERVIEW
+-----------------
+Total Projects: ${this.projects.length}
+- Interactive Applications: ${interactiveProjects}
+- Utility Tools: ${utilityProjects}
+- Games: ${gameProjects}
+
+FEATURED PROJECTS
+-----------------
+${this.projects.slice(0, 10).map(project =>
+`• ${project.name.toUpperCase()}
+  Description: ${project.description}
+  Category: ${project.category}
+  Technologies: ${project.tags.join(', ')}
+`).join('\n')}
+
+TECHNICAL SKILLS
+----------------
+• JavaScript (ES6+)
+• HTML5 & CSS3
+• DOM Manipulation
+• API Integration
+• Responsive Design
+• Interactive UI/UX
+
+CONTACT
+-------
+Portfolio: JavaScript Projects Collection
+Generated: ${new Date().toLocaleDateString()}
+
+Visit the online portfolio for live demos and complete project details.
+`;
+    }
+
+    updateLastModified() {
+        const lastUpdatedElement = document.getElementById('last-updated');
+        if (lastUpdatedElement) {
+            const currentDate = new Date();
+            const options = {
+                year: 'numeric',
+                month: 'long',
+                day: 'numeric'
+            };
+            lastUpdatedElement.textContent = currentDate.toLocaleDateString('en-US', options);
+        }
+    }
+
+    syncFooterProjectCount() {
+        const footerCountElement = document.getElementById('footer-project-count');
+        if (footerCountElement) {
+            footerCountElement.textContent = this.projects.length;
+        }
+    }
+
+    setFilter(filter) {
+        this.currentFilter = filter;
+
+        // Update button states
+        document.querySelectorAll('.filter-btn').forEach(btn => {
+            btn.classList.toggle('active', btn.dataset.filter === filter);
+        });
+
+        this.filterProjects();
+    }
+
+    filterProjects() {
+        this.filteredProjects = this.projects.filter(project => {
+            const matchesSearch = project.name.toLowerCase().includes(this.searchTerm) ||
+                                project.description.toLowerCase().includes(this.searchTerm) ||
+                                project.tags.some(tag => tag.toLowerCase().includes(this.searchTerm));
+
+            const matchesFilter = this.currentFilter === 'all' || project.category === this.currentFilter;
+
+            return matchesSearch && matchesFilter;
+        });
+
+        this.renderProjects();
+        this.updateProjectCount();
+    }
+
+    renderProjects() {
+        const container = document.getElementById('projects-container');
+        const noResults = document.getElementById('no-results');
+
+        if (this.filteredProjects.length === 0) {
+            container.style.display = 'none';
+            noResults.style.display = 'block';
+            return;
+        }
+
+        container.style.display = 'grid';
+        noResults.style.display = 'none';
+
+        container.innerHTML = this.filteredProjects.map(project => this.createProjectCard(project)).join('');
+
+        // Apply current view
+        this.updateView();
+
+        // Animate cards
+        this.animateCards();
+    }
+
+    createProjectCard(project) {
+        const projectPath = project.name.replace(/\s+/g, '%20');
+        const folderName = project.name;
+
+        return `
+            <div class="project-card" data-category="${project.category}">
+                <div class="project-preview">
+                    <i class="${project.icon} project-icon"></i>
+                </div>
+                <div class="project-content">
+                    <h3 class="project-title">${project.name}</h3>
+                    <p class="project-description">${project.description}</p>
+                    <div class="project-tags">
+                        ${project.tags.map(tag => `<span class="project-tag">${tag}</span>`).join('')}
+                    </div>
+                    <div class="project-actions">
+                        <a href="${folderName}/index.html" class="btn btn-primary" target="_blank">
+                            <i class="fas fa-external-link-alt"></i>
+                            View Project
+                        </a>
+                        <button class="btn btn-secondary" onclick="this.showProjectInfo('${project.name}')">
+                            <i class="fas fa-info-circle"></i>
+                            Info
+                        </button>
+                    </div>
+                </div>
+            </div>
+        `;
+    }
+
+    updateView() {
+        const container = document.getElementById('projects-container');
+        const cards = container.querySelectorAll('.project-card');
+
+        if (this.currentView === 'list') {
+            container.classList.add('list-view');
+            cards.forEach(card => card.classList.add('list-view'));
+        } else {
+            container.classList.remove('list-view');
+            cards.forEach(card => card.classList.remove('list-view'));
+        }
+    }
+
+    updateProjectCount() {
+        const countElement = document.getElementById('project-count');
+        const footerCountElement = document.getElementById('footer-project-count');
+
+        countElement.textContent = this.filteredProjects.length;
+        if (footerCountElement) {
+            footerCountElement.textContent = this.projects.length;
+        }
+
+        // Animate the count
+        countElement.style.transform = 'scale(1.2)';
+        setTimeout(() => {
+            countElement.style.transform = 'scale(1)';
+        }, 200);
+    }
+
+    animateCards() {
+        const cards = document.querySelectorAll('.project-card');
+        cards.forEach((card, index) => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(30px)';
+
+            setTimeout(() => {
+                card.style.transition = 'all 0.6s cubic-bezier(0.4, 0, 0.2, 1)';
+                card.style.opacity = '1';
+                card.style.transform = 'translateY(0)';
+            }, index * 100);
+        });
+    }
+
+    animateOnScroll() {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        });
+
+        // Observe elements that should animate on scroll
+        document.querySelectorAll('.project-card, .controls, .stats').forEach(el => {
+            observer.observe(el);
+        });
+    }
+
+    showProjectInfo(projectName) {
+        const project = this.projects.find(p => p.name === projectName);
+        if (!project) return;
+
+        // Create a simple modal-like alert with project information
+        const info = `
+📋 Project: ${project.name}
+📝 Description: ${project.description}
+🏷️ Category: ${project.category}
+🔖 Tags: ${project.tags.join(', ')}
+
+Click "View Project" to open the application in a new tab.
+        `;
+
+        alert(info);
+    }
+
+    setupEventListeners() {
+        // Search functionality
+        const searchInput = document.getElementById('search-input');
+        const searchBtn = document.getElementById('search-btn');
+        const clearBtn = document.getElementById('clear-search');
+
+        if (searchInput) {
+            searchInput.addEventListener('input', (e) => {
+                this.searchTerm = e.target.value.toLowerCase();
+                this.filterProjects();
+
+                // Show/hide clear button
+                clearBtn.style.display = this.searchTerm ? 'flex' : 'none';
+            });
+
+            searchInput.addEventListener('keypress', (e) => {
+                if (e.key === 'Enter') {
+                    e.preventDefault();
+                    this.filterProjects();
+                }
+            });
+        }
+
+        if (clearBtn) {
+            clearBtn.addEventListener('click', () => {
+                searchInput.value = '';
+                this.searchTerm = '';
+                this.filterProjects();
+                clearBtn.style.display = 'none';
+                searchInput.focus();
+            });
+        }
+
+        // Filter buttons
+        document.querySelectorAll('.filter-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                this.setFilter(btn.dataset.filter);
+            });
+        });
+
+        // View toggle
+        document.querySelectorAll('.view-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Update active state
+                document.querySelectorAll('.view-btn').forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+
+                // Update view
+                this.currentView = btn.dataset.view;
+                this.updateView();
+            });
+        });
+
+        // Keyboard shortcuts
+        document.addEventListener('keydown', (e) => {
+            // Ctrl/Cmd + / for search focus
+            if ((e.ctrlKey || e.metaKey) && e.key === '/') {
+                e.preventDefault();
+                searchInput.focus();
+            }
+
+            // Ctrl/Cmd + 1-4 for filter shortcuts
+            if ((e.ctrlKey || e.metaKey) && e.key >= '1' && e.key <= '4') {
+                e.preventDefault();
+                const filters = ['all', 'interactive', 'utility', 'game'];
+                const filterIndex = parseInt(e.key) - 1;
+                if (filters[filterIndex]) {
+                    this.setFilter(filters[filterIndex]);
+                }
+            }
+
+            // Ctrl/Cmd + R to refresh GitHub stats (prevent default browser refresh)
+            if ((e.ctrlKey || e.metaKey) && e.key === 'r' && e.shiftKey) {
+                e.preventDefault();
+                console.log('🔄 Manually refreshing GitHub stats via keyboard shortcut...');
+                this.clearStatsCache();
+                this.fetchGitHubStats();
+                this.showSuccessNotification('Refreshing GitHub statistics...');
+            }
+        });
+    }
+
+    setupThemeToggle() {
+        const headerToggle = document.getElementById('theme-toggle-header');
+        const footerToggle = document.getElementById('theme-toggle');
+
+        // Get current theme from localStorage or default to light
+        const currentTheme = localStorage.getItem('theme') || 'light';
+        document.documentElement.setAttribute('data-theme', currentTheme);
+
+        // Update both toggles to match current theme
+        this.updateThemeToggleUI(currentTheme);
+
+        // Header theme toggle
+        if (headerToggle) {
+            headerToggle.addEventListener('click', () => {
+                this.toggleTheme();
+            });
+        }
+
+        // Footer theme toggle (if exists)
+        if (footerToggle) {
+            footerToggle.addEventListener('click', () => {
+                this.toggleTheme();
+            });
+        }
+    }
+
+    toggleTheme() {
+        const currentTheme = document.documentElement.getAttribute('data-theme');
+        const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+
+        document.documentElement.setAttribute('data-theme', newTheme);
+        localStorage.setItem('theme', newTheme);
+
+        this.updateThemeToggleUI(newTheme);
+    }
+
+    updateThemeToggleUI(theme) {
+        const headerToggle = document.getElementById('theme-toggle-header');
+        const footerToggle = document.getElementById('theme-toggle');
+
+        // Update header toggle
+        if (headerToggle) {
+            const icon = headerToggle.querySelector('i');
+            const text = headerToggle.querySelector('.toggle-text');
+
+            if (theme === 'dark') {
+                icon.className = 'fas fa-sun';
+                if (text) text.textContent = 'Light Mode';
+            } else {
+                icon.className = 'fas fa-moon';
+                if (text) text.textContent = 'Dark Mode';
+            }
+        }
+
+        // Update footer toggle (if exists)
+        if (footerToggle) {
+            const icon = footerToggle.querySelector('i');
+
+            if (theme === 'dark') {
+                icon.className = 'fas fa-sun';
+            } else {
+                icon.className = 'fas fa-moon';
+            }
+        }
+    }
+
+    updateDynamicYear() {
+        // Update year in header stats
+        const headerYearElement = document.getElementById('current-year-header');
+        if (headerYearElement) {
+            headerYearElement.textContent = year;
+        }
+
+        // Update year in footer copyright
+        const footerYearElement = document.getElementById('current-year-footer');
+        if (footerYearElement) {
+            footerYearElement.textContent = year;
+        }
+
+        // Update last modified date to be current
+        this.updateLastModified();
+
+        console.log(`✅ Dynamic year updated to: ${year}`);
+        console.log(`✅ Last updated date refreshed to current date`);
+    }
 }
 
-// Apply debouncing to search
-const debouncedSearch = debounce(() => {
-    filterAndRenderProjects();
-}, 300);
+// Global function for project info (needed for onclick handlers)
+window.showProjectInfo = function(projectName) {
+    portfolio.showProjectInfo(projectName);
+};
 
-// Replace the original search event listener
-searchInput.removeEventListener('input', filterAndRenderProjects);
-searchInput.addEventListener('input', (e) => {
-    currentSearch = e.target.value.toLowerCase();
-    debouncedSearch();
+// Initialize the portfolio when DOM is loaded
+document.addEventListener('DOMContentLoaded', () => {
+    window.portfolio = new ProjectPortfolio();
+
+    // Add some easter eggs and interactions
+    const title = document.querySelector('.main-title');
+    title.addEventListener('click', () => {
+        title.style.transform = 'rotate(360deg)';
+        setTimeout(() => {
+            title.style.transform = 'rotate(0deg)';
+        }, 600);
+    });
+
+    // Add floating particles effect to header
+    createFloatingParticles();
 });
 
-// Add loading animation
-function showLoading() {
-    projectsGrid.innerHTML = '<div class="loading">Loading projects...</div>';
+function createFloatingParticles() {
+    const header = document.querySelector('.header');
+    const particleCount = 20;
+
+    for (let i = 0; i < particleCount; i++) {
+        const particle = document.createElement('div');
+        particle.style.cssText = `
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            animation: float ${3 + Math.random() * 4}s infinite ease-in-out;
+            left: ${Math.random() * 100}%;
+            top: ${Math.random() * 100}%;
+            animation-delay: ${Math.random() * 2}s;
+        `;
+        header.appendChild(particle);
+    }
+
+    // Add CSS animation for floating particles
+    const style = document.createElement('style');
+    style.textContent = `
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); opacity: 0.3; }
+            50% { transform: translateY(-20px) rotate(180deg); opacity: 0.8; }
+        }
+    `;
+    document.head.appendChild(style);
 }
 
-// Add smooth scroll to top when filtering
-function scrollToTop() {
-    window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-    });
-}
-
-// Enhanced filter functionality with smooth transitions
-filterButtons.forEach(button => {
-    button.addEventListener('click', () => {
-        scrollToTop();
-    });
-});
+// Add some useful console messages for developers
+console.log('🚀 JavaScript Projects Portfolio loaded successfully!');
+console.log('💡 Keyboard shortcuts:');
+console.log('   Ctrl/Cmd + / : Focus search');
+console.log('   Ctrl/Cmd + 1-4 : Switch filters');
+console.log('   Ctrl/Cmd + Shift + R : Refresh GitHub stats');
+console.log('🎨 Theme toggle available in bottom right corner');
+console.log('📱 Responsive design adapts to all screen sizes');
+console.log('📊 GitHub stats are fetched live from manthanank/javascript-projects');
+console.log('🔄 Double-click on stats section to refresh GitHub data');

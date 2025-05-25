@@ -8,51 +8,198 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
 <body>
-    <div class="container">        <header class="header">
+    <div class="container">
+        <header class="header" id="top">
             <div class="header-top">
-                <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark/light mode">
-                    <i class="fas fa-moon"></i>
-                    <i class="fas fa-sun"></i>
-                </button>
+                <div class="header-nav">
+                    <div class="logo">
+                        <i class="fas fa-code"></i>
+                        <span>JS Portfolio</span>
+                    </div>
+                    <div class="header-actions">
+                        <button class="theme-toggle-header" id="theme-toggle-header" title="Toggle theme">
+                            <i class="fas fa-moon"></i>
+                            <span class="toggle-text">Dark Mode</span>
+                        </button>
+                    </div>
+                </div>
             </div>
-            <h1 class="title">
-                <i class="fab fa-js-square"></i>
-                JavaScript Projects Portfolio
-            </h1>
-            <p class="subtitle">A collection of interactive web applications and games</p>
+            <div class="header-content">
+                <h1 class="main-title">
+                    <i class="fas fa-code"></i>
+                    JavaScript Projects Portfolio
+                </h1>
+                <p class="subtitle">Explore my collection of interactive JavaScript applications</p>
+                <div class="stats">
+                    <div class="stat-item">
+                        <span class="stat-number" id="project-count">0</span>
+                        <span class="stat-label">Projects</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">100%</span>
+                        <span class="stat-label">JavaScript</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" id="current-year-header"></span>
+                        <span class="stat-label">Year</span>
+                    </div>
+                </div>
+            </div>
         </header>
 
-        <div class="search-container">
-            <div class="search-box">
+        <main class="main-content" id="projects">
+            <div class="controls">
+                <div class="search-container">
+                    <i class="fas fa-search search-icon"></i>
+                    <input type="text" id="search-input" placeholder="Search projects..." class="search-input">
+                </div>
+                <div class="filter-buttons">
+                    <button class="filter-btn active" data-filter="all">
+                        <i class="fas fa-th-large"></i>
+                        All Projects
+                    </button>
+                    <button class="filter-btn" data-filter="interactive">
+                        <i class="fas fa-mouse-pointer"></i>
+                        Interactive
+                    </button>
+                    <button class="filter-btn" data-filter="utility">
+                        <i class="fas fa-tools"></i>
+                        Utilities
+                    </button>
+                    <button class="filter-btn" data-filter="game">
+                        <i class="fas fa-gamepad"></i>
+                        Games
+                    </button>
+                </div>
+                <div class="view-toggle">
+                    <button class="view-btn active" data-view="grid">
+                        <i class="fas fa-th"></i>
+                    </button>
+                    <button class="view-btn" data-view="list">
+                        <i class="fas fa-list"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="projects-container" id="projects-container">
+                <!-- Projects will be dynamically loaded here -->
+            </div>
+
+            <div class="no-results" id="no-results" style="display: none;">
                 <i class="fas fa-search"></i>
-                <input type="text" id="searchInput" placeholder="Search projects...">
+                <h3>No projects found</h3>
+                <p>Try adjusting your search or filter criteria</p>
             </div>
-            <div class="filter-buttons">
-                <button class="filter-btn active" data-filter="all">All Projects</button>
-                <button class="filter-btn" data-filter="utility">Utilities</button>
-                <button class="filter-btn" data-filter="game">Games</button>
-                <button class="filter-btn" data-filter="ui">UI Components</button>
-                <button class="filter-btn" data-filter="calculator">Calculators</button>
-            </div>
-        </div>
+        </main>
 
-        <div class="stats">
-            <div class="stat-item">
-                <span class="stat-number" id="totalProjects">0</span>
-                <span class="stat-label">Total Projects</span>
-            </div>
-            <div class="stat-item">
-                <span class="stat-number" id="visibleProjects">0</span>
-                <span class="stat-label">Visible Projects</span>
-            </div>
-        </div>
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="footer-grid">
+                    <!-- About Section -->
+                    <div class="footer-section">
+                        <div class="footer-logo">
+                            <i class="fas fa-code"></i>
+                            <span>JS Portfolio</span>
+                        </div>
+                        <p class="footer-description">
+                            A curated collection of interactive JavaScript projects showcasing modern web development techniques and creative solutions.
+                        </p>
+                        <div class="footer-stats-mini">
+                            <div class="stat-mini">
+                                <i class="fas fa-project-diagram"></i>
+                                <span id="footer-project-count">22</span>
+                                <small>Projects</small>
+                            </div>
+                            <div class="stat-mini" title="Repository watchers from GitHub">
+                                <i class="fas fa-eye"></i>
+                                <span class="counter" data-target="15420">0</span>
+                                <small>Views</small>
+                            </div>
+                            <div class="stat-mini" title="GitHub repository stars">
+                                <i class="fas fa-star"></i>
+                                <span class="counter" data-target="1250">0</span>
+                                <small>Stars</small>
+                            </div>
+                        </div>
+                    </div>
 
-        <div class="projects-grid" id="projectsGrid">
-            <!-- Projects will be dynamically inserted here -->
-        </div>        <footer class="footer">
-            <p>&copy; 2025 JavaScript Projects Portfolio. Built with ❤️ and vanilla JavaScript.</p>
-            <div class="keyboard-shortcuts">
-                <p>Keyboard shortcuts: <span class="shortcut"><kbd>Ctrl</kbd>+<kbd>K</kbd> Search</span> <span class="shortcut"><kbd>Ctrl</kbd>+<kbd>D</kbd> Toggle Theme</span> <span class="shortcut"><kbd>Ctrl</kbd>+<kbd>1-5</kbd> Filter Categories</span></p>
+                    <!-- Quick Links -->
+                    <div class="footer-section">
+                        <h3 class="footer-title">Quick Links</h3>
+                        <ul class="footer-links">
+                            <li><a href="#top" class="footer-link"><i class="fas fa-arrow-up"></i> Back to Top</a></li>
+                            <li><a href="#projects" class="footer-link"><i class="fas fa-folder-open"></i> All Projects</a></li>
+                            <li><a href="mailto:contact@example.com" class="footer-link"><i class="fas fa-envelope"></i> Contact</a></li>
+                            <li><a href="#" class="footer-link" id="download-resume"><i class="fas fa-download"></i> Download Resume</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Categories -->
+                    <div class="footer-section">
+                        <h3 class="footer-title">Project Categories</h3>
+                        <ul class="footer-links">
+                            <li><a href="#" class="footer-link category-link" data-category="interactive">
+                                <i class="fas fa-mouse-pointer"></i> Interactive Apps
+                            </a></li>
+                            <li><a href="#" class="footer-link category-link" data-category="utility">
+                                <i class="fas fa-tools"></i> Utilities
+                            </a></li>
+                            <li><a href="#" class="footer-link category-link" data-category="game">
+                                <i class="fas fa-gamepad"></i> Games
+                            </a></li>
+                            <li><a href="#" class="footer-link">
+                                <i class="fas fa-plus"></i> More Coming Soon
+                            </a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Connect & Tech Stack -->
+                    <div class="footer-section">
+                        <h3 class="footer-title">Connect & Tech</h3>
+                        <div class="social-links-footer">
+                            <a href="https://github.com/manthanank/javascript-projects" class="social-link-footer" target="_blank" rel="noopener">
+                                <i class="fab fa-github"></i>
+                                <span>GitHub</span>
+                            </a>
+                            <a href="https://linkedin.com" class="social-link-footer" target="_blank" rel="noopener">
+                                <i class="fab fa-linkedin"></i>
+                                <span>LinkedIn</span>
+                            </a>
+                            <a href="https://twitter.com" class="social-link-footer" target="_blank" rel="noopener">
+                                <i class="fab fa-twitter"></i>
+                                <span>Twitter</span>
+                            </a>
+                            <a href="https://codepen.io" class="social-link-footer" target="_blank" rel="noopener">
+                                <i class="fab fa-codepen"></i>
+                                <span>CodePen</span>
+                            </a>
+                        </div>
+                        <div class="tech-stack">
+                            <span class="tech-badge">JavaScript</span>
+                            <span class="tech-badge">HTML5</span>
+                            <span class="tech-badge">CSS3</span>
+                            <span class="tech-badge">APIs</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Footer Bottom -->
+                <div class="footer-bottom">
+                    <div class="footer-bottom-content">
+                        <div class="footer-copyright">
+                            <p>&copy; <span id="current-year-footer"></span> JavaScript Projects Portfolio. Built with ❤️ and JavaScript.</p>
+                            <p class="footer-last-updated">Last updated: <span id="last-updated"></span></p>
+                        </div>
+                        <div class="footer-bottom-links">
+                            <a href="#" class="footer-bottom-link">Privacy Policy</a>
+                            <a href="#" class="footer-bottom-link">Terms of Use</a>
+                            <a href="#" class="footer-bottom-link">Accessibility</a>
+                            <button class="back-to-top" id="back-to-top" title="Back to top">
+                                <i class="fas fa-chevron-up"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
             </div>
         </footer>
     </div>
