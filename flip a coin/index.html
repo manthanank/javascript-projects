@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Coin Flipper</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="background-pattern"></div>
+    
+    <div class="app-container">
+        <header class="header">
+            <h1 class="title">
+                <span class="title-icon">🪙</span>
+                Coin Flipper
+                <span class="title-subtitle">Make Your Decision</span>
+            </h1>
+        </header>
+
+        <main class="main-content">
+            <div class="coin-container">
+                <div class="coin-wrapper" id="coin-wrapper">
+                    <!-- Heads Side -->
+                    <div class="coin-side coin-heads" id="coin-heads">
+                        <svg width="200" height="200" viewBox="0 0 200 200">
+                            <defs>
+                                <radialGradient id="headsGradient" cx="0.3" cy="0.2" r="1">
+                                    <stop offset="0%" style="stop-color:#ffd700"/>
+                                    <stop offset="30%" style="stop-color:#ffed4e"/>
+                                    <stop offset="70%" style="stop-color:#d4af37"/>
+                                    <stop offset="100%" style="stop-color:#b8860b"/>
+                                </radialGradient>
+                                <filter id="coinShadow">
+                                    <feDropShadow dx="0" dy="8" flood-opacity="0.3" flood-color="#000"/>
+                                </filter>
+                            </defs>
+                            <circle cx="100" cy="100" r="90" fill="url(#headsGradient)" filter="url(#coinShadow)"/>
+                            <circle cx="100" cy="100" r="85" fill="none" stroke="#8b7355" stroke-width="2"/>
+                            <circle cx="100" cy="100" r="75" fill="none" stroke="#d4af37" stroke-width="1"/>
+                            
+                            <!-- Decorative stars -->
+                            <g fill="#8b7355">
+                                <polygon points="100,35 102,41 108,41 103,45 105,51 100,47 95,51 97,45 92,41 98,41" />
+                                <polygon points="100,165 102,159 108,159 103,155 105,149 100,153 95,149 97,155 92,159 98,159" />
+                                <polygon points="35,100 41,98 41,92 45,97 51,95 47,100 51,105 45,103 41,108 41,102" />
+                                <polygon points="165,100 159,98 159,92 155,97 149,95 153,100 149,105 155,103 159,108 159,102" />
+                            </g>
+                            
+                            <text x="100" y="110" text-anchor="middle" font-size="24" fill="#2c1810" font-family="Poppins, sans-serif" font-weight="700">HEADS</text>
+                        </svg>
+                    </div>
+
+                    <!-- Tails Side -->
+                    <div class="coin-side coin-tails" id="coin-tails">
+                        <svg width="200" height="200" viewBox="0 0 200 200">
+                            <defs>
+                                <radialGradient id="tailsGradient" cx="0.3" cy="0.2" r="1">
+                                    <stop offset="0%" style="stop-color:#c0c0c0"/>
+                                    <stop offset="30%" style="stop-color:#e8e8e8"/>
+                                    <stop offset="70%" style="stop-color:#a8a8a8"/>
+                                    <stop offset="100%" style="stop-color:#808080"/>
+                                </radialGradient>
+                            </defs>
+                            <circle cx="100" cy="100" r="90" fill="url(#tailsGradient)" filter="url(#coinShadow)"/>
+                            <circle cx="100" cy="100" r="85" fill="none" stroke="#606060" stroke-width="2"/>
+                            <circle cx="100" cy="100" r="75" fill="none" stroke="#a8a8a8" stroke-width="1"/>
+                            
+                            <!-- Eagle design -->
+                            <g fill="#606060">
+                                <path d="M100 60 L110 80 L100 85 L90 80 Z"/>
+                                <circle cx="100" cy="90" r="15" fill="none" stroke="#606060" stroke-width="2"/>
+                                <path d="M85 95 Q100 105 115 95"/>
+                                <path d="M100 105 L95 120 L100 115 L105 120 Z"/>
+                            </g>
+                            
+                            <text x="100" y="140" text-anchor="middle" font-size="24" fill="#2c1810" font-family="Poppins, sans-serif" font-weight="700">TAILS</text>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+
+            <div class="controls">
+                <button class="flip-button" id="flip-btn">
+                    <span class="button-text">FLIP COIN</span>
+                    <span class="button-icon">🎯</span>
+                </button>
+                
+                <div class="result-display" id="result-display">
+                    <div class="result-text" id="result-text">Click to flip!</div>
+                </div>
+            </div>
+
+            <div class="stats-panel" id="stats-panel">
+                <div class="stat-item">
+                    <div class="stat-number" id="heads-count">0</div>
+                    <div class="stat-label">Heads</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" id="total-flips">0</div>
+                    <div class="stat-label">Total Flips</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" id="tails-count">0</div>
+                    <div class="stat-label">Tails</div>
+                </div>
+            </div>
+
+            <button class="reset-button" id="reset-btn">Reset Stats</button>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

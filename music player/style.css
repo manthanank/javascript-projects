@@ -1,0 +1,33 @@
+main {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin: 0;
+    font-family: cursive;
+}
+
+audio {
+    width: 60%;
+    margin: 20px 0;
+}
+
+button {
+    width: 120px;
+    height: 50px;
+    font-size: 1.2em;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background-color: white;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    margin: 10px;
+}
+
+button:hover {
+    background-color: #ccc;
+}

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="background">
+        <div class="app-container">
+            <header class="app-header">
+                <h1><i class="fas fa-cloud-sun"></i> Weather App</h1>
+                <p>Get real-time weather information for any location</p>
+            </header>
+
+            <div class="search-container">
+                <form class="search-form">
+                    <div class="input-group">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <input type="text" id="query" placeholder="Enter city name..." aria-label="Location">
+                        <button type="button" class="search-btn">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                </form>
+            </div>
+
+            <div class="weather-card" id="weather-card">
+                <div class="weather-icon-container">
+                    <img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='24'%20height='24'%20viewBox='0%200%2024%2024'%3E%3Cpath%20fill='%23ccc'%20d='M12%202l3.09%206.26L22%209.27l-5%204.87%201.18%206.88L12%2017.77l-6.18%203.25L7%2014.14%202%209.27l6.91-1.01L12%202z'/%3E%3C/svg%3E" alt="Weather icon" class="icon">
+                </div>
+
+                <div class="location-info">
+                    <h2 class="name"></h2>
+                    <p class="current-time"></p>
+                </div>
+
+                <div class="temperature-display">
+                    <span class="temp"></span>
+                    <div class="weather-status">
+                        <h3 class="main"></h3>
+                        <p class="description"></p>
+                    </div>
+                </div>
+
+                <div class="weather-details">
+                    <div class="detail-item">
+                        <i class="fas fa-wind"></i>
+                        <div>
+                            <span class="label">Wind Speed</span>
+                            <span class="value wind"></span>
+                        </div>
+                    </div>
+                    <div class="detail-item">
+                        <i class="fas fa-thermometer-half"></i>
+                        <div>
+                            <span class="label">Feels Like</span>
+                            <span class="value feels-like">--°C</span>
+                        </div>
+                    </div>
+                    <div class="detail-item">
+                        <i class="fas fa-eye"></i>
+                        <div>
+                            <span class="label">Visibility</span>
+                            <span class="value visibility">-- km</span>
+                        </div>
+                    </div>
+                    <div class="detail-item">
+                        <i class="fas fa-tint"></i>
+                        <div>
+                            <span class="label">Humidity</span>
+                            <span class="value humidity">--%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+
+</html>

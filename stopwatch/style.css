@@ -1,0 +1,58 @@
+body {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+.container {
+    background: #fff;
+    padding: 2.5rem 2rem;
+    border-radius: 1.5rem;
+    box-shadow: 0 8px 32px rgba(44, 62, 80, 0.2);
+    text-align: center;
+    min-width: 320px;
+}
+
+h1 {
+    margin-bottom: 1.5rem;
+    color: #4f3c8d;
+    letter-spacing: 2px;
+}
+
+.stopwatch {
+    font-size: 2.5rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 2rem;
+    color: #333;
+    background: #f3f3f3;
+    padding: 1rem 2rem;
+    border-radius: 1rem;
+    display: inline-block;
+}
+
+.buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+button {
+    padding: 0.7rem 1.5rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 0.7rem;
+    background: #667eea;
+    color: #fff;
+    cursor: pointer;
+    transition: background 0.2s;
+    font-weight: 500;
+}
+
+button:hover {
+    background: #4f3c8d;
+} 

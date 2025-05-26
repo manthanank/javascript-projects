@@ -1,0 +1,59 @@
+body {
+  /* padding: 25px; */
+  background-color: white;
+  color: black;
+}
+
+.dark-mode {
+  background-color: black;
+  color: white;
+}
+main {
+  margin-top: 20px;
+}
+
+h1 {
+  text-align: center;
+  font-family: cursive;
+  margin-top: 20px;
+}
+
+.container {
+  margin-top: 60px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.toggle-button {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+  background-color: gray;
+  border-radius: 34px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.toggle-button:before {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 30px;
+  height: 30px;
+  background-color: white;
+  border-radius: 50%;
+  transition: all 0.2s ease-in-out;
+}
+
+.toggle-button.active {
+  background-color: green;
+}
+
+.toggle-button.active:before {
+  transform: translateX(26px);
+}

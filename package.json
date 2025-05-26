@@ -1,0 +1,50 @@
+{
+  "name": "javascript-projects",
+  "version": "1.0.0",
+  "description": "A collection of small JavaScript projects for learning and practice",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
+    "lint": "eslint ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/manthanank/javascript-projects.git"
+  },
+  "keywords": [
+    "javascript",
+    "html",
+    "css",
+    "web-development",
+    "learning",
+    "projects"
+  ],
+  "author": "Manthan Ankolekar",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/manthanank/javascript-projects/issues"
+  },
+  "homepage": "https://github.com/manthanank/javascript-projects#readme",
+  "jest": {
+    "testEnvironment": "jsdom",
+    "testMatch": [
+      "**/__tests__/**/*.js",
+      "**/?(*.)+(spec|test).js"
+    ],
+    "collectCoverageFrom": [
+      "**/*.js",
+      "!**/node_modules/**",
+      "!**/coverage/**",
+      "!jest.config.js"
+    ]
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.27.0",
+    "eslint": "^9.27.0",
+    "jest": "^29.7.0",
+    "jest-environment-jsdom": "^29.7.0"
+  }
+}
