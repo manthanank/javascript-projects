@@ -5,29 +5,136 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta property="og:title" content="">
-    <meta property="og:description" content="">
+    <meta name="description" content="Generate QR codes for WiFi networks quickly and easily">
+    <meta property="og:title" content="WiFi QR Code Generator">
+    <meta property="og:description" content="Generate QR codes for WiFi networks quickly and easily">
 
     <title>WiFi QR Code Generator</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
 </head>
 
 <body>
-    <main>
-        <h1>WiFi QR Code Generator</h1>
-        <p>Enter the WiFi network information:</p>
-        <label for="ssid">SSID: </label>
-        <input id="ssid" type="text" oninput="updateButton()">
-        <br>
-        <label for="password">Password: </label>
-        <input id="password" type="password">
-        <br>
-        <button id="generate-button" onclick="generateQR()" disabled>Generate QR Code</button>
-        <br><br>
-        <div id="qr-code"></div>
-    </main>
+    <div class="container">
+        <header class="header">
+            <div class="icon-wrapper">
+                <i class="fas fa-wifi"></i>
+            </div>
+            <h1>WiFi QR Generator</h1>
+            <p class="subtitle">Share your WiFi instantly with a QR code</p>
+        </header>
+
+        <main class="main-content">
+            <div class="form-card">
+                <div class="form-header">
+                    <i class="fas fa-network-wired"></i>
+                    <h2>Network Details</h2>
+                </div>
+
+                <form class="wifi-form" id="wifi-form">
+                    <div class="form-group">
+                        <label for="ssid">
+                            <i class="fas fa-wifi"></i>
+                            Network Name (SSID)
+                        </label>
+                        <input
+                            id="ssid"
+                            type="text"
+                            placeholder="Enter your WiFi network name"
+                            oninput="updateButton()"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="security">
+                            <i class="fas fa-shield-alt"></i>
+                            Security Type
+                        </label>
+                        <select id="security" onchange="togglePasswordField()">
+                            <option value="WPA">WPA/WPA2</option>
+                            <option value="WEP">WEP</option>
+                            <option value="nopass">Open Network</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group" id="password-group">
+                        <label for="password">
+                            <i class="fas fa-lock"></i>
+                            Password
+                        </label>
+                        <div class="password-input-wrapper">
+                            <input
+                                id="password"
+                                type="password"
+                                placeholder="Enter your WiFi password"
+                            >
+                            <button type="button" class="toggle-password" onclick="togglePassword()">
+                                <i class="fas fa-eye" id="password-toggle-icon"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="hidden">
+                            <i class="fas fa-eye-slash"></i>
+                            Network Visibility
+                        </label>
+                        <div class="checkbox-wrapper">
+                            <input type="checkbox" id="hidden">
+                            <label for="hidden" class="checkbox-label">Hidden Network</label>
+                        </div>
+                    </div>
+
+                    <button
+                        type="button"
+                        id="generate-button"
+                        onclick="generateQR()"
+                        disabled
+                        class="generate-btn"
+                    >
+                        <i class="fas fa-qrcode"></i>
+                        Generate QR Code
+                    </button>
+                </form>
+            </div>
+
+            <div class="qr-card" id="qr-card">
+                <div class="qr-header">
+                    <i class="fas fa-qrcode"></i>
+                    <h3>Your WiFi QR Code</h3>
+                </div>
+                <div class="qr-container">
+                    <div id="qr-code"></div>
+                    <div class="qr-placeholder" id="qr-placeholder">
+                        <i class="fas fa-qrcode"></i>
+                        <p>QR code will appear here</p>
+                    </div>
+                </div>
+                <div class="qr-actions" id="qr-actions" style="display: none;">
+                    <button class="action-btn" onclick="downloadQR()">
+                        <i class="fas fa-download"></i>
+                        Download
+                    </button>
+                    <button class="action-btn" onclick="shareQR()">
+                        <i class="fas fa-share-alt"></i>
+                        Share
+                    </button>
+                    <button class="action-btn secondary" onclick="clearQR()">
+                        <i class="fas fa-trash"></i>
+                        Clear
+                    </button>
+                </div>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p>&copy; 2025 WiFi QR Generator. Made with <i class="fas fa-heart"></i></p>
+        </footer>
+    </div>
+
     <script src="./script.js"></script>
 </body>
 
