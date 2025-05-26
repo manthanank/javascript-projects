@@ -96,7 +96,7 @@ body {
     font-size: 1.5rem;
     background: var(--gradient-accent);
     -webkit-background-clip: text;
-    background-clip: text;
+    background-clip: padding-box; /* fallback */
     -webkit-text-fill-color: transparent;
     color: transparent;
 }
@@ -157,7 +157,7 @@ body {
     margin-right: 1rem;
     background: var(--gradient-accent);
     -webkit-background-clip: text;
-    background-clip: text;
+    background-clip: padding-box; /* fallback */
     -webkit-text-fill-color: transparent;
     color: transparent;
 }
