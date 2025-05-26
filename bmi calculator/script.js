@@ -1,4 +1,3 @@
-// eslint-disable-next-line no-unused-vars
 function calculateBMI() {
   var height = parseFloat(document.getElementById('height').value);
   var weight = parseFloat(document.getElementById('weight').value);
@@ -11,3 +10,11 @@ function calculateBMI() {
   var bmi = weight / Math.pow(height / 100, 2);
   document.getElementById('result').innerHTML = 'Your BMI is: ' + bmi.toFixed(2);
 }
+
+// Add event listener to the calculate button
+document.addEventListener('DOMContentLoaded', function() {
+  const calculateButton = document.getElementById('calculate-button');
+  if (calculateButton) {
+    calculateButton.addEventListener('click', calculateBMI);
+  }
+});

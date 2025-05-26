@@ -397,7 +397,7 @@ class ProjectPortfolio {
   clearStatsCache() {
     try {
       localStorage.removeItem('github_stats_cache');
-    } catch (error) {
+    } catch {
       // Failed to clear cache
     }
   }

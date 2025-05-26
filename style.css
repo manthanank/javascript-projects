@@ -12,8 +12,8 @@
     --shadow-light: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
     --shadow-medium: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
     --shadow-large: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
-    --gradient-primary: linear-gradient(135deg, #667eea, #764ba2);
-    --gradient-accent: linear-gradient(135deg, #f093fb, #f5576c);
+    --gradient-primary: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    --gradient-accent: linear-gradient(135deg, var(--accent-color), var(--primary-color));
     --border-radius: 12px;
     --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -96,9 +96,8 @@ body {
     font-size: 1.5rem;
     background: var(--gradient-accent);
     -webkit-background-clip: text;
-    background-clip: padding-box; /* fallback */
     -webkit-text-fill-color: transparent;
-    color: transparent;
+    background-clip: text;
 }
 
 .header-actions {
@@ -120,12 +119,7 @@ body {
     transition: var(--transition);
     font-size: 0.9rem;
     font-weight: 500;
-    /* Backdrop filter with vendor prefix for maximum compatibility */
-    -webkit-backdrop-filter: blur(10px);
-    /* Standard backdrop filter property */
     backdrop-filter: blur(10px);
-    /* Fallback for browsers without backdrop-filter support */
-    background: rgba(255, 255, 255, 0.9) !important;
 }
 
 .theme-toggle-header:hover {
@@ -161,9 +155,8 @@ body {
     margin-right: 1rem;
     background: var(--gradient-accent);
     -webkit-background-clip: text;
-    background-clip: padding-box; /* fallback */
     -webkit-text-fill-color: transparent;
-    color: transparent;
+    background-clip: text;
 }
 
 .subtitle {
@@ -469,7 +462,7 @@ body {
 
 /* Footer */
 .footer {
-    background: linear-gradient(135deg, #f8fafc 0%, #ffffff 100%);
+    background: linear-gradient(135deg, var(--surface-color) 0%, var(--background-color) 100%);
     border-top: 1px solid var(--border-color);
     margin-top: 4rem;
     position: relative;
@@ -517,11 +510,9 @@ body {
 
 .footer-logo i {
     background: var(--gradient-primary);
-    /* Gradient text effect using WebKit-specific properties */
-    background-clip: padding-box; /* Fallback for non-WebKit browsers */
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    color: transparent;
+    background-clip: text;
     font-size: 2rem;
 }
 

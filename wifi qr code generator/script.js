@@ -2,7 +2,6 @@
 
 let currentQRCode = null;
 
-// eslint-disable-next-line no-unused-vars
 function generateQR() {
   const container = document.getElementById('qr-code');
   const placeholder = document.getElementById('qr-placeholder');
@@ -83,7 +82,6 @@ function updateButton() {
   }
 }
 
-// eslint-disable-next-line no-unused-vars
 function togglePasswordField() {
   const security = document.getElementById('security').value;
   const passwordGroup = document.getElementById('password-group');

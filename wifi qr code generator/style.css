@@ -59,12 +59,7 @@ body {
   background: rgba(255, 255, 255, 0.2);
   border-radius: 50%;
   margin-bottom: 1rem;
-  /* Backdrop filter for glass effect */
-  -webkit-backdrop-filter: blur(10px);
-  /* stylelint-disable-next-line property-no-unknown */
   backdrop-filter: blur(10px);
-  /* Fallback for browsers without backdrop-filter support */
-  background: rgba(255, 255, 255, 0.9) !important;
   border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
@@ -205,7 +200,7 @@ body {
 
 .generate-btn {
   width: 100%;
-  background: linear-gradient(135deg, #667eea, #764ba2);
+  background: linear-gradient(135deg, var(--primary-color), var(--primary-light));
   color: white;
   border: none;
   padding: 1rem 2rem;
@@ -440,3 +435,4 @@ body {
 .fade-in-up {
   animation: fadeInUp 0.5s ease-out;
 }
+
