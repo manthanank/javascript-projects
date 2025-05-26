@@ -84,6 +84,7 @@ body {
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
   /* Backdrop filter for glass effect */
   -webkit-backdrop-filter: blur(10px);
+  /* stylelint-disable-next-line property-no-unknown */
   backdrop-filter: blur(10px);
   /* Fallback for browsers without backdrop-filter support */
   background: rgba(255, 255, 255, 0.9) !important;
@@ -147,6 +148,7 @@ body {
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
   /* Backdrop filter for glass effect */
   -webkit-backdrop-filter: blur(20px);
+  /* stylelint-disable-next-line property-no-unknown */
   backdrop-filter: blur(20px);
   /* Fallback for browsers without backdrop-filter support */
   background: rgba(255, 255, 255, 0.9) !important;

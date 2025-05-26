@@ -61,6 +61,7 @@ body {
   margin-bottom: 1rem;
   /* Backdrop filter for glass effect */
   -webkit-backdrop-filter: blur(10px);
+  /* stylelint-disable-next-line property-no-unknown */
   backdrop-filter: blur(10px);
   /* Fallback for browsers without backdrop-filter support */
   background: rgba(255, 255, 255, 0.9) !important;
