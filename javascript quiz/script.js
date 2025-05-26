@@ -1,4 +1,6 @@
 // script.js
+/* global questions */
+
 const questionContainer = document.getElementById('question-container');
 const answerButtons = document.getElementById('answer-buttons');
 const submitButton = document.getElementById('submit-btn');

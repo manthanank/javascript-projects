@@ -1,3 +1,3 @@
-document.getElementById("myButton").onclick = function () {
-    location.href = "";
+document.getElementById('myButton').onclick = function () {
+  location.href = '';
 };

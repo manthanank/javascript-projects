@@ -1,8 +1,17 @@
+/* global QRCode */
+
+// eslint-disable-next-line no-unused-vars
 function generateQR() {
-    var text = document.getElementById("text").value;
-    var qr = new QRCode(document.getElementById("qr-code"), {
-      text: text,
-      width: 128,
-      height: 128
-    });
-  }
+  const text = document.getElementById('text').value;
+
+  // Clear previous QR code
+  const qrContainer = document.getElementById('qr-code');
+  qrContainer.innerHTML = '';
+
+  // Generate new QR code
+  new QRCode(qrContainer, {
+    text: text,
+    width: 128,
+    height: 128
+  });
+}

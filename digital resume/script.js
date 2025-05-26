@@ -1,10 +1,8 @@
-const toggleButton = document.querySelector(".toggle-button");
+const toggleButton = document.querySelector('.toggle-button');
 
-toggleButton.addEventListener("click", function() {
-  this.classList.toggle("active");
+toggleButton.addEventListener('click', function() {
+  // Toggle the active state of the button
+  this.classList.toggle('active');
+  // Toggle dark mode on the body
+  document.body.classList.toggle('dark-mode');
 });
-
-function myFunction() {
-    let element = document.body;
-    element.classList.toggle("dark-mode");
-}
