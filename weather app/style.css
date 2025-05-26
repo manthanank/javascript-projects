@@ -82,6 +82,7 @@ body {
   border-radius: 25px;
   padding: 5px 5px 5px 20px;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  /* Backdrop filter for glass effect */
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
   transition: all 0.3s ease;
@@ -142,6 +143,7 @@ body {
   border-radius: 25px;
   padding: 30px;
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+  /* Backdrop filter for glass effect */
   -webkit-backdrop-filter: blur(20px);
   backdrop-filter: blur(20px);
   opacity: 0;

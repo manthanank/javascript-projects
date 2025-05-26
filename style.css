@@ -120,6 +120,7 @@ body {
     transition: var(--transition);
     font-size: 0.9rem;
     font-weight: 500;
+    /* Backdrop filter with vendor prefix for maximum compatibility */
     -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
 }
@@ -513,8 +514,9 @@ body {
 
 .footer-logo i {
     background: var(--gradient-primary);
+    /* Gradient text effect using WebKit-specific properties */
+    background-clip: padding-box; /* Fallback for non-WebKit browsers */
     -webkit-background-clip: text;
-    background-clip: text;
     -webkit-text-fill-color: transparent;
     color: transparent;
     font-size: 2rem;
