@@ -20,5 +20,13 @@ module.exports = {
   ignorePatterns: [
     'node_modules/',
     '*.min.js'
+  ],
+  overrides: [
+    {
+      files: ['**/__tests__/**/*.js', '**/*.test.js', '**/*.spec.js'],
+      env: {
+        jest: true
+      }
+    }
   ]
 };

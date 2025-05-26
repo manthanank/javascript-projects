@@ -59,6 +59,7 @@ body {
   background: rgba(255, 255, 255, 0.2);
   border-radius: 50%;
   margin-bottom: 1rem;
+  -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.3);
 }
@@ -200,7 +201,7 @@ body {
 
 .generate-btn {
   width: 100%;
-  background: linear-gradient(135deg, var(--primary-color), var(--primary-light));
+  background: linear-gradient(135deg, #667eea, #764ba2);
   color: white;
   border: none;
   padding: 1rem 2rem;
