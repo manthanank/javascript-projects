@@ -74,6 +74,8 @@ body {
     /* Backdrop filter for glass effect */
     -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
+    /* Fallback for browsers without backdrop-filter support */
+    background: rgba(255, 255, 255, 0.9) !important;
     border-radius: 24px;
     padding: 40px;
     box-shadow: 0 20px 60px rgba(0,0,0,0.2);

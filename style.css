@@ -123,6 +123,8 @@ body {
     /* Backdrop filter with vendor prefix for maximum compatibility */
     -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
+    /* Fallback for browsers without backdrop-filter support */
+    background: rgba(255, 255, 255, 0.9) !important;
 }
 
 .theme-toggle-header:hover {
