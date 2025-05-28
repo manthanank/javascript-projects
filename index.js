@@ -18,6 +18,14 @@ const projectsData = [
     path: './analog clock/index.html'
   },
   {
+    name: 'birthday reminder',
+    description: 'Keep track of important birthdays with reminders, notifications, and age calculations. Never forget a special day again.',
+    category: 'utility',
+    tags: ['birthday', 'reminder', 'calendar', 'notifications'],
+    icon: 'fas fa-birthday-cake',
+    path: './birthday reminder/index.html'
+  },
+  {
     name: 'bmi calculator',
     description: 'Calculate your Body Mass Index with instant results and health recommendations. Clean, user-friendly interface.',
     category: 'utility',

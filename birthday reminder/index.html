@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Birthday Reminder</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <h1><i class="fas fa-birthday-cake"></i> Birthday Reminder</h1>
+      <p>Keep track of all your loved ones' special days</p>
+    </header>
+
+    <main class="main-content">
+      <section class="add-birthday">
+        <h2>Add New Birthday</h2>
+        <form id="birthdayForm" class="birthday-form">
+          <div class="form-group">
+            <label for="personName">Name</label>
+            <input type="text" id="personName" placeholder="Enter person's name" required>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="birthdayMonth">Birth Month</label>
+              <select id="birthdayMonth" required>
+                <option value="">Select Month</option>
+                <option value="01">January</option>
+                <option value="02">February</option>
+                <option value="03">March</option>
+                <option value="04">April</option>
+                <option value="05">May</option>
+                <option value="06">June</option>
+                <option value="07">July</option>
+                <option value="08">August</option>
+                <option value="09">September</option>
+                <option value="10">October</option>
+                <option value="11">November</option>
+                <option value="12">December</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="birthdayDay">Birth Day</label>
+              <select id="birthdayDay" required>
+                <option value="">Select Day</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="birthYear">Birth Year (Optional)</label>
+            <input type="number" id="birthYear" placeholder="e.g., 1990" min="1900" max="2025">
+            <small>Leave empty if you prefer not to show age</small>
+          </div>
+
+          <div class="form-group">
+            <label for="relationship">Relationship</label>
+            <select id="relationship">
+              <option value="myself">Myself</option>
+              <option value="family">Family</option>
+              <option value="friend">Friend</option>
+              <option value="colleague">Colleague</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+
+          <button type="submit" class="btn-add">
+            <i class="fas fa-plus"></i> Add Birthday
+          </button>
+        </form>
+      </section>
+
+      <section class="upcoming-birthdays">
+        <h2><i class="fas fa-calendar-alt"></i> Upcoming Birthdays</h2>
+        <div id="upcomingList" class="birthday-list">
+          <!-- Upcoming birthdays will be displayed here -->
+        </div>
+      </section>
+
+      <section class="all-birthdays">
+        <div class="section-header">
+          <h2><i class="fas fa-list"></i> All Birthdays</h2>
+          <div class="filter-buttons">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="myself">Myself</button>
+            <button class="filter-btn" data-filter="family">Family</button>
+            <button class="filter-btn" data-filter="friend">Friends</button>
+            <button class="filter-btn" data-filter="colleague">Colleagues</button>
+            <button class="filter-btn" data-filter="other">Other</button>
+          </div>
+        </div>
+        <div id="birthdaysList" class="birthday-list">
+          <!-- All birthdays will be displayed here -->
+        </div>
+        <div id="emptyState" class="empty-state" style="display: none;">
+          <i class="fas fa-gift"></i>
+          <p>No birthdays added yet!</p>
+          <p>Add your first birthday reminder above.</p>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
