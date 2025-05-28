@@ -44,7 +44,7 @@ A collection of small, interactive JavaScript projects designed for learning and
 - [Tic Tac Toe](./tic%20tac%20toe/index.html) - Classic two-player game
 - API document with swagger JSON
 - BAFFLE effect in CSS
-- Birthday reminder
+- [Birthday reminder](./birthday%20reminder/index.html) - Manage and display birthdays with countdowns
 - Bookshelf
 - Catch me bug game
 - Chat UI

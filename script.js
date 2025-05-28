@@ -1,3 +1,12 @@
+/**
+ * JavaScript Projects Portfolio
+ * Main application script for the interactive project portfolio
+ *
+ * @author Manthan Ankolekar
+ * @version 2.0.0
+ * @license MIT
+ */
+
 // Project data configuration
 const projectsData = [
   {
@@ -6,6 +15,13 @@ const projectsData = [
     category: 'interactive',
     tags: ['clock', 'time', 'animation', 'css'],
     icon: 'fas fa-clock'
+  },
+  {
+    name: 'birthday reminder',
+    description: 'Keep track of important birthdays with reminders, notifications, and age calculations. Never forget a special day again.',
+    category: 'utility',
+    tags: ['birthday', 'reminder', 'calendar', 'notifications'],
+    icon: 'fas fa-birthday-cake'
   },
   {
     name: 'bmi calculator',
@@ -156,9 +172,17 @@ const projectsData = [
   }
 ];
 
+// Get current year for dynamic updates
 const year = new Date().getFullYear();
 
+/**
+ * ProjectPortfolio class manages the interactive portfolio functionality
+ * Handles project filtering, search, theming, and GitHub API integration
+ */
 class ProjectPortfolio {
+  /**
+   * Initialize the portfolio with default settings
+   */
   constructor() {
     this.projects = projectsData;
     this.filteredProjects = [...this.projects];
@@ -169,6 +193,9 @@ class ProjectPortfolio {
     this.init();
   }
 
+  /**
+   * Initialize all portfolio features
+   */
   init() {
     this.setupEventListeners();
     this.setupThemeToggle();
@@ -176,9 +203,12 @@ class ProjectPortfolio {
     this.updateProjectCount();
     this.animateOnScroll();
     this.setupFooterFeatures();
-    this.updateDynamicYear(); // Add this line
+    this.updateDynamicYear();
   }
 
+  /**
+   * Setup all footer-related features including GitHub stats
+   */
   setupFooterFeatures() {
     // Fetch GitHub stats first, then setup other features
     this.fetchGitHubStats();
@@ -202,11 +232,17 @@ class ProjectPortfolio {
     this.syncFooterProjectCount();
   }
 
+  /**
+   * Fetch GitHub repository statistics
+   */
   async fetchGitHubStats() {
     // Use the enhanced retry mechanism
     await this.fetchGitHubStatsWithRetry();
   }
 
+  /**
+   * Update counters with loading state
+   */
   updateCountersWithLoading() {
     const counters = document.querySelectorAll('.counter');
     counters.forEach(counter => {
@@ -414,7 +450,10 @@ class ProjectPortfolio {
     }
   }
 
-  // Enhanced error handling with retry mechanism and caching
+  /**
+   * Enhanced error handling with retry mechanism and caching
+   * @param {number} retries - Number of retry attempts
+   */
   async fetchGitHubStatsWithRetry(retries = 2) {
     const username = 'manthanank';
     const repoName = 'javascript-projects';
@@ -460,9 +499,9 @@ class ProjectPortfolio {
         const repoData = await repoResponse.json();
 
         const stats = {
-          stars: repoData.stargazers_count,
-          views: repoData.watchers_count, // Using watchers as a proxy for views
-          forks: repoData.forks_count,
+          stars: repoData.stargazers_count || 0,
+          views: repoData.watchers_count || 0, // Using watchers as a proxy for views
+          forks: repoData.forks_count || 0,
           timestamp: Date.now()
         };
 
