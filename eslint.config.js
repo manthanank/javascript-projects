@@ -49,7 +49,18 @@ export default [
         File: 'readonly',
         Blob: 'readonly',
         URL: 'readonly',
-        FileReader: 'readonly'
+        FileReader: 'readonly',
+
+        // Event APIs
+        Event: 'readonly',
+        DragEvent: 'readonly',
+        DataTransfer: 'readonly',
+        KeyboardEvent: 'readonly',
+        TouchEvent: 'readonly',
+        Touch: 'readonly',
+
+        // DOM APIs
+        HTMLElement: 'readonly'
       }
     },
     rules: {

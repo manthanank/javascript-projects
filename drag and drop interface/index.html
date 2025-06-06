@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drag and Drop Interface</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Drag and Drop Interface</h1>
+        <p>Drag items from the source area to the target areas below</p>
+
+        <div class="drag-container">
+            <div class="source-area">
+                <h3>Draggable Items</h3>
+                <div class="item" draggable="true" data-id="1">
+                    <span class="icon">📝</span>
+                    <span>Task Item</span>
+                </div>
+                <div class="item" draggable="true" data-id="2">
+                    <span class="icon">📅</span>
+                    <span>Calendar Event</span>
+                </div>
+                <div class="item" draggable="true" data-id="3">
+                    <span class="icon">📧</span>
+                    <span>Email</span>
+                </div>
+                <div class="item" draggable="true" data-id="4">
+                    <span class="icon">📊</span>
+                    <span>Report</span>
+                </div>
+                <div class="item" draggable="true" data-id="5">
+                    <span class="icon">🏷️</span>
+                    <span>Label</span>
+                </div>
+            </div>
+
+            <div class="drop-zones">
+                <div class="drop-zone" data-zone="todo">
+                    <h3>To Do</h3>
+                    <div class="drop-area">
+                        <p class="placeholder">Drop items here</p>
+                    </div>
+                </div>
+
+                <div class="drop-zone" data-zone="progress">
+                    <h3>In Progress</h3>
+                    <div class="drop-area">
+                        <p class="placeholder">Drop items here</p>
+                    </div>
+                </div>
+
+                <div class="drop-zone" data-zone="done">
+                    <h3>Completed</h3>
+                    <div class="drop-area">
+                        <p class="placeholder">Drop items here</p>
+                    </div>
+                </div>
+
+                <div class="drop-zone" data-zone="trash">
+                    <h3>🗑️ Trash</h3>
+                    <div class="drop-area trash">
+                        <p class="placeholder">Drop to delete</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="controls">
+            <button id="reset-btn">Reset All Items</button>
+            <button id="add-item-btn">Add New Item</button>
+        </div>
+
+        <div class="stats">
+            <div class="stat">
+                <span class="stat-label">Items Moved:</span>
+                <span id="move-count">0</span>
+            </div>
+            <div class="stat">
+                <span class="stat-label">Items Deleted:</span>
+                <span id="delete-count">0</span>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
